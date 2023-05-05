@@ -12,6 +12,7 @@ export default function Index() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        fontSize: "min(3vh, 2vw)",
       }}
     >
       <Head>
@@ -23,7 +24,7 @@ export default function Index() {
           style={{ alignSelf: "center", display: "flex", alignItems: "center" }}
         >
           <Link
-            style={{ marginBottom: "5%", marginRight: "0.5rem" }}
+            style={{ marginBottom: "3.5em", marginRight: "1em" }}
             onClick={(e) => {
               alert("Please try again later :)");
               e.preventDefault();
@@ -33,13 +34,13 @@ export default function Index() {
             <Image
               src={door}
               style={{
-                width: 37,
-                height: 62,
+                width: "3em",
+                height: "5em",
                 /* transform: perspective(300px) rotateY(-28deg) skew(0deg, 11deg) */
               }}
             />
           </Link>
-          <svg width="50vw" height="10vh">
+          <svg width="25em" height="5em" overflow="visible">
             {/* TODO: Add dots */}
             <svg height="50%">
               <rect width="100%" height="100%" fill="black"></rect>
@@ -52,8 +53,8 @@ export default function Index() {
               ></rect>
               <rect y="20%" x="1%" width="95%" height="60%" fill="black"></rect>
             </svg>
-            <svg y="50%" height="50%">
-              <text y="97.5%" x="89%">
+            <svg y="50%" height="1.5em" overflow="visible">
+              <text y="97.5%" x="89%" dominant-baseline="ideographic">
                 99%
               </text>
             </svg>

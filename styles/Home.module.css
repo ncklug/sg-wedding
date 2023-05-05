@@ -1,10 +1,51 @@
 .container {
+  /* font-size: 3rem; */
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.retro {
+  width: 400px;
+  height: 400px;
+}
+
+.doorwrapper {
+  width: 260px;
+  height: 450px;
+}
+
+.onlydoor {
+  /* width: 250px;
+  height: 400px; */
+  /* transform: scale(200%); */
+  position: absolute;
+  right:100;
+  top:100;
+}
+
+.topprogress {
+  display: flex;
+  width: 100%
+}
+
+.filler {
+  flex: 1;
+}
+
+.link {
+  width: 10%
+}
+
+.door {
+  width: 37px;
+  height: 62px;
+  left: 10%;
+  float: right;
+  /* transform: perspective(300px) rotateY(-28deg) skew(0deg, 11deg) */
 }
 
 .main {

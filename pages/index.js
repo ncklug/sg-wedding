@@ -77,15 +77,15 @@ export default function Index() {
                 <rect width="100%" height="100%" fill="black"></rect>
                 <rect
                   y="10%"
-                  x="0.5%"
-                  width="99%"
+                  x="1%"
+                  width="98%"
                   height="80%"
                   fill="white"
                 ></rect>
                 <rect
                   y="20%"
-                  x="1%"
-                  width="95%"
+                  x="2%"
+                  width="93%"
                   height="60%"
                   fill="black"
                 ></rect>

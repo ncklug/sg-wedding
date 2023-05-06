@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import door from "../assets/door_1.png";
+import bablogo from "../assets/bablogo.png";
 import {
   Tooltip,
   extendTheme,
@@ -108,19 +109,19 @@ export default function Index() {
                 ></rect>
               </svg>
               <svg y="50%" height="1.5em" overflow="visible">
-                <text y="97.5%" x="89%" dominantBaseline="ideographic">
+                <text y="97.5%" x="84%" dominantBaseline="ideographic">
                   99%
                 </text>
               </svg>
             </svg>
             <Link
-              style={{ marginBottom: "3.5em", marginLeft: "1em" }}
+              style={{ marginBottom: "3em", marginLeft: "1em" }}
               href="/wedding"
             >
               <Image
-                src={door}
+                src={bablogo}
                 style={{
-                  width: "3em",
+                  width: "5em",
                   height: "5em",
                 }}
               />

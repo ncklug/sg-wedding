@@ -8,6 +8,7 @@ import {
   ChakraProvider,
   defineStyleConfig,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 // define the base component styles
 const baseTooltipStyle = {};
@@ -22,6 +23,7 @@ const theme = extendTheme({
 });
 
 export default function Index() {
+  const [doorTooltipOpen, setDoorTooltipOpen] = useState(false);
   return (
     <ChakraProvider theme={theme}>
       <div
@@ -53,10 +55,12 @@ export default function Index() {
               // placement="top"
               bg="black"
               color="white"
+              isOpen={doorTooltipOpen}
             >
               <Link
                 style={{ marginBottom: "3.5em", marginRight: "1em" }}
                 onClick={(e) => {
+                  setDoorTooltipOpen((prev) => !prev);
                   e.preventDefault();
                 }}
                 href="/home"
@@ -96,6 +100,18 @@ export default function Index() {
                 </text>
               </svg>
             </svg>
+            <Link
+              style={{ marginBottom: "3.5em", marginLeft: "1em" }}
+              href="/wedding"
+            >
+              <Image
+                src={door}
+                style={{
+                  width: "3em",
+                  height: "5em",
+                }}
+              />
+            </Link>
           </div>
         </div>
         <div style={{ flex: "1" }}></div>

@@ -8,7 +8,7 @@ import {
   ChakraProvider,
   defineStyleConfig,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // define the base component styles
 const baseTooltipStyle = {};
@@ -24,6 +24,19 @@ const theme = extendTheme({
 
 export default function Index() {
   const [doorTooltipOpen, setDoorTooltipOpen] = useState(false);
+  const timeoutId = useRef(undefined);
+  useEffect(() => {
+    if (doorTooltipOpen) {
+      timeoutId.current = setTimeout(() => {
+        setDoorTooltipOpen(false);
+      }, 3000);
+    } else {
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
+        timeoutId.current = undefined;
+      }
+    }
+  }, [doorTooltipOpen]);
   return (
     <ChakraProvider theme={theme}>
       <div

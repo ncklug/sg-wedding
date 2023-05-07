@@ -75,8 +75,8 @@ export default function Index() {
               alignSelf: "center",
             }}
           >
-            <div style={{ fontSize: "1em", marginBottom: "0.3em" }}>
-              Please come back later :&#41;
+            <div style={{ fontSize: "0.95em", marginBottom: "0.3em" }}>
+              Please check back later :&#41;
               {/* <span style={{ display: "inline-block", width: "3em" }}>
                 {LOADING_DOTS[loadingDotsIdx % 4]}
               </span> */}

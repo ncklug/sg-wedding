@@ -63,7 +63,7 @@ export default function Index() {
         }}
       >
         <Head>
-          <title>SG Wedding!</title>
+          <title>Nathan & Faith</title>
         </Head>
 
         <div style={{ display: "flex" }}>

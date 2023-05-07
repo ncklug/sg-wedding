@@ -54,12 +54,12 @@ export default function Index() {
     <ChakraProvider theme={theme}>
       <div
         style={{
-          height: "100vh",
+          height: "100lvh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          fontSize: "min(3vh, 2vw)",
+          fontSize: "min(3lvh, 2lvw)",
         }}
       >
         <Head>

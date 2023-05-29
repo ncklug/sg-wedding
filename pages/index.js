@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import door from "../assets/door_1.png";
 import bablogo from "../assets/bablogo.png";
+// import wave from "../assets/wave.svg";
 import {
   Tooltip,
   extendTheme,
@@ -23,7 +24,47 @@ const theme = extendTheme({
   },
 });
 
-const LOADING_DOTS = ["   ", ".  ", ".. ", "..."];
+const WavePathBackground = (props) =>
+  [0, 1, 2, 5, 6, 7].map((n) => <WavePath offset={n} />);
+
+const WavePath = (props) => (
+  <svg
+    width="100vw"
+    height="14em"
+    viewBox="0 0 1098.72 37"
+    style={{
+      position: "absolute",
+      top: `calc(-120px + ${props.offset * 14 || 0}vh`,
+    }}
+  >
+    <path
+      id="curve"
+      fill="transparent"
+      d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"
+    />
+    <text
+      width="100%"
+      style={{ transform: "translate3d(0, 0, 0)", fontSize: "3em" }}
+    >
+      <textPath
+        style={{ transform: "translate3d(0, 0, 0)" }}
+        alignmentBaseline="top"
+        xlinkHref="#curve"
+        id="text-path"
+      >
+        {"FAITH & NATHAN & ".repeat(5)}
+        <animate
+          attributeName="startOffset"
+          from={`-${100 + props.offset * 20}%`}
+          to={`-${props.offset * 20}%`}
+          begin="0s"
+          dur="3s"
+          repeatCount="indefinite"
+        />
+      </textPath>
+    </text>
+  </svg>
+);
 
 export default function Index() {
   const [doorTooltipOpen, setDoorTooltipOpen] = useState(false);
@@ -52,6 +93,10 @@ export default function Index() {
 
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        <title>Nathan & Faith</title>
+      </Head>
+      <WavePathBackground />
       <div
         style={{
           height: "100dvh",
@@ -62,11 +107,16 @@ export default function Index() {
           fontSize: "min(3dvh, 2dvw)",
         }}
       >
-        <Head>
-          <title>Nathan & Faith</title>
-        </Head>
-
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+            // position: "relative",
+            // backgroundColor: "white",
+            // width: "60%",
+            // justifyContent: "center",
+            // padding: "2em 0",
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -75,11 +125,13 @@ export default function Index() {
               alignSelf: "center",
             }}
           >
-            <div style={{ fontSize: "0.95em", marginBottom: "0.3em" }}>
+            <div
+              style={{
+                fontSize: "0.95em",
+                marginBottom: "0.3em",
+              }}
+            >
               Please check back later :&#41;
-              {/* <span style={{ display: "inline-block", width: "3em" }}>
-                {LOADING_DOTS[loadingDotsIdx % 4]}
-              </span> */}
             </div>
             <div
               style={{
@@ -88,35 +140,7 @@ export default function Index() {
                 alignItems: "center",
               }}
             >
-              {/* <Tooltip
-                label={
-                  <span style={{ fontSize: "1em" }}>
-                    Come back later :&#41;
-                  </span>
-                }
-                bg="black"
-                color="white"
-                isOpen={doorTooltipOpen}
-              >
-                <Link
-                  style={{ marginBottom: "3.5em", marginRight: "1em" }}
-                  onClick={(e) => {
-                    setDoorTooltipOpen((prev) => !prev);
-                    e.preventDefault();
-                  }}
-                  href="/home"
-                >
-                  <Image
-                    src={door}
-                    style={{
-                      width: "3em",
-                      height: "5em",
-                    }}
-                  />
-                </Link>
-              </Tooltip> */}
               <svg width="25em" height="5em" overflow="visible">
-                {/* TODO: Add dots */}
                 <svg height="50%">
                   <rect width="100%" height="100%" fill="black"></rect>
                   <rect
@@ -129,29 +153,17 @@ export default function Index() {
                   <rect
                     y="20%"
                     x="2%"
-                    width="74%"
+                    width="87%"
                     height="60%"
                     fill="black"
                   ></rect>
                 </svg>
                 <svg y="50%" height="1.5em" overflow="visible">
-                  <text y="97.5%" x="64%" dominantBaseline="ideographic">
-                    74%
+                  <text y="97.5%" x="79%" dominantBaseline="ideographic">
+                    87%
                   </text>
                 </svg>
               </svg>
-              {/* <Link
-                style={{ marginBottom: "3em", marginLeft: "1em" }}
-                href="/wedding"
-              >
-                <Image
-                  src={bablogo}
-                  style={{
-                    width: "3.9em",
-                    height: "3.9em",
-                  }}
-                />
-              </Link> */}
             </div>
           </div>
         </div>

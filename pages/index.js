@@ -67,30 +67,6 @@ const WavePath = (props) => (
 );
 
 export default function Index() {
-  const [doorTooltipOpen, setDoorTooltipOpen] = useState(false);
-  const timeoutId = useRef(undefined);
-
-  useEffect(() => {
-    if (doorTooltipOpen) {
-      timeoutId.current = setTimeout(() => {
-        setDoorTooltipOpen(false);
-      }, 3000);
-    } else {
-      if (timeoutId.current) {
-        clearTimeout(timeoutId.current);
-        timeoutId.current = undefined;
-      }
-    }
-  }, [doorTooltipOpen]);
-
-  const [loadingDotsIdx, setLoadingDotsIdx] = useState(0);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoadingDotsIdx((prev) => prev + 1);
-    }, 800);
-  }, [loadingDotsIdx]);
-
   return (
     <ChakraProvider theme={theme}>
       <Head>
@@ -110,11 +86,6 @@ export default function Index() {
         <div
           style={{
             display: "flex",
-            // position: "relative",
-            // backgroundColor: "white",
-            // width: "60%",
-            // justifyContent: "center",
-            // padding: "2em 0",
           }}
         >
           <div

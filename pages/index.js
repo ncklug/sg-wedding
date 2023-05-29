@@ -34,7 +34,7 @@ const WavePath = (props) => (
     viewBox="0 0 1098.72 37"
     style={{
       position: "absolute",
-      top: `calc(-120px + ${props.offset * 14 || 0}vh`,
+      top: `calc(-120px + ${props.offset * 14 || 0}dvh`,
     }}
   >
     <path

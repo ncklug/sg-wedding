@@ -10,7 +10,7 @@ export default function Home() {
         height: "100vh",
       }}
     >
-      [Our story will go here]
+      FAQ
     </div>
   );
 }

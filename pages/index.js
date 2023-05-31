@@ -1,16 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import door from "../assets/door_1.png";
 import bablogo from "../assets/bablogo.png";
+import webFaq from "../assets/uwuwebFAQwhite.png";
 import backgroundHorizontal from "../assets/backgroundHorizontal.png";
+import backgroundVertical from "../assets/backgroundVertical.png";
 import {
-  Tooltip,
   extendTheme,
   ChakraProvider,
   defineStyleConfig,
+  Center,
 } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
 import { useWindowSize } from "@uidotdev/usehooks";
 
 // define the base component styles
@@ -25,54 +25,18 @@ const theme = extendTheme({
   },
 });
 
-const WavePathBackground = (props) =>
-  [0, 1, 2, 5, 6, 7].map((n) => <WavePath offset={n} />);
-
-const WavePath = (props) => (
-  <svg
-    width="100vw"
-    height="14em"
-    viewBox="0 0 1098.72 37"
-    style={{
-      position: "absolute",
-      top: `calc(-120px + ${props.offset * 14 || 0}dvh`,
-    }}
-  >
-    <path
-      id="curve"
-      fill="transparent"
-      d="M0.17,0.23c0,0,105.85,77.7,276.46,73.2s243.8-61.37,408.77-54.05c172.09,7.64,213.4,92.34,413.28,64.19"
-    />
-    <text
-      width="100%"
-      style={{
-        transform: "translate3d(0, 0, 0)",
-        fontSize: "3em",
-        fill: "white",
-      }}
-    >
-      <textPath
-        style={{ transform: "translate3d(0, 0, 0)" }}
-        alignmentBaseline="top"
-        xlinkHref="#curve"
-        id="text-path"
-      >
-        {"FAITH & NATHAN & ".repeat(5)}
-        <animate
-          attributeName="startOffset"
-          from={`-${100 + props.offset * 20}%`}
-          to={`-${props.offset * 20}%`}
-          begin="0s"
-          dur="3s"
-          repeatCount="indefinite"
-        />
-      </textPath>
-    </text>
-  </svg>
-);
-
 export default function Index() {
   const { width, height } = useWindowSize();
+  const imageMeta = width > height ? backgroundHorizontal : backgroundVertical;
+  const viewportRatio = width / height;
+  const imageRatio = imageMeta.width / imageMeta.height;
+  let size = { width: 0, height: 0 };
+  if (width != null) {
+    size =
+      viewportRatio > imageRatio
+        ? { height: height, width: height * imageRatio }
+        : { width: width, height: width / imageRatio };
+  }
 
   return (
     <ChakraProvider theme={theme}>
@@ -86,11 +50,31 @@ export default function Index() {
           backgroundColor: "black",
         }}
       >
-        <div
+        <Center h="100dvh" w="100dvw">
+          <div style={size}>
+            <Image {...size} src={imageMeta} />
+            <Link href="/faq">
+              <Image
+                style={{
+                  position: "relative",
+                  zIndex: 1,
+                  top: -size.height + size.height * 0.44,
+                  left: size.width * 0.22,
+                  transform: "rotate(-5deg)",
+                }}
+                width={(webFaq.width * (size.width / imageMeta.width)) / 2.5}
+                height={
+                  (webFaq.height * (size.height / imageMeta.height)) / 2.5
+                }
+                src={webFaq}
+              />
+            </Link>
+          </div>
+        </Center>
+        {/* <div
           style={
             height != null
               ? {
-                  // ...size,
                   height,
                   width,
                   backgroundSize: "contain",
@@ -99,79 +83,11 @@ export default function Index() {
                   backgroundImage:
                     width > height
                       ? `url("${backgroundHorizontal.src}")`
-                      : `url("${bablogo.src}")`,
+                      : `url("${backgroundVertical.src}")`,
                 }
               : {}
           }
-        />
-      </div>
-      <WavePathBackground />
-      <div
-        style={{
-          height: "100dvh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "min(3dvh, 2dvw)",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              alignSelf: "center",
-            }}
-          >
-            <div
-              style={{
-                fontSize: "0.95em",
-                marginBottom: "0.3em",
-              }}
-            >
-              Please check back later :&#41;
-            </div>
-            <div
-              style={{
-                alignSelf: "center",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <svg width="25em" height="5em" overflow="visible">
-                <svg height="50%">
-                  <rect width="100%" height="100%" fill="black"></rect>
-                  <rect
-                    y="10%"
-                    x="1%"
-                    width="98%"
-                    height="80%"
-                    fill="white"
-                  ></rect>
-                  <rect
-                    y="20%"
-                    x="2%"
-                    width="87%"
-                    height="60%"
-                    fill="black"
-                  ></rect>
-                </svg>
-                <svg y="50%" height="1.5em" overflow="visible">
-                  <text y="97.5%" x="79%" dominantBaseline="ideographic">
-                    87%
-                  </text>
-                </svg>
-              </svg>
-              <Link href="/story">Story</Link>
-            </div>
-          </div>
-        </div>
+        /> */}
       </div>
     </ChakraProvider>
   );

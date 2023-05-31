@@ -27,7 +27,8 @@ const theme = extendTheme({
 
 export default function Index() {
   const { width, height } = useWindowSize();
-  const imageMeta = width > height ? backgroundHorizontal : backgroundVertical;
+  const isHorizontal = width > height;
+  const imageMeta = isHorizontal ? backgroundHorizontal : backgroundVertical;
   const viewportRatio = width / height;
   const imageRatio = imageMeta.width / imageMeta.height;
   let size = { width: 0, height: 0 };
@@ -37,6 +38,7 @@ export default function Index() {
         ? { height: height, width: height * imageRatio }
         : { width: width, height: width / imageRatio };
   }
+  const faqRatio = isHorizontal ? 2.5 : 3;
 
   return (
     <ChakraProvider theme={theme}>
@@ -58,13 +60,16 @@ export default function Index() {
                 style={{
                   position: "relative",
                   zIndex: 1,
-                  top: -size.height + size.height * 0.44,
-                  left: size.width * 0.22,
-                  transform: "rotate(-5deg)",
+                  top:
+                    -size.height + size.height * (isHorizontal ? 0.44 : 0.47),
+                  left: size.width * (isHorizontal ? 0.22 : 0.65),
+                  transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
                 }}
-                width={(webFaq.width * (size.width / imageMeta.width)) / 2.5}
+                width={
+                  (webFaq.width * (size.width / imageMeta.width)) / faqRatio
+                }
                 height={
-                  (webFaq.height * (size.height / imageMeta.height)) / 2.5
+                  (webFaq.height * (size.height / imageMeta.height)) / faqRatio
                 }
                 src={webFaq}
               />

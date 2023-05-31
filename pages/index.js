@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import door from "../assets/door_1.png";
 import bablogo from "../assets/bablogo.png";
-// import wave from "../assets/wave.svg";
+import backgroundHorizontal from "../assets/backgroundHorizontal.png";
 import {
   Tooltip,
   extendTheme,
@@ -11,6 +11,7 @@ import {
   defineStyleConfig,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 // define the base component styles
 const baseTooltipStyle = {};
@@ -44,7 +45,11 @@ const WavePath = (props) => (
     />
     <text
       width="100%"
-      style={{ transform: "translate3d(0, 0, 0)", fontSize: "3em" }}
+      style={{
+        transform: "translate3d(0, 0, 0)",
+        fontSize: "3em",
+        fill: "white",
+      }}
     >
       <textPath
         style={{ transform: "translate3d(0, 0, 0)" }}
@@ -67,11 +72,39 @@ const WavePath = (props) => (
 );
 
 export default function Index() {
+  const { width, height } = useWindowSize();
+
   return (
     <ChakraProvider theme={theme}>
       <Head>
         <title>Nathan & Faith</title>
       </Head>
+      <div
+        style={{
+          position: "absolute",
+          zIndex: -1,
+          backgroundColor: "black",
+        }}
+      >
+        <div
+          style={
+            height != null
+              ? {
+                  // ...size,
+                  height,
+                  width,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundImage:
+                    width > height
+                      ? `url("${backgroundHorizontal.src}")`
+                      : `url("${bablogo.src}")`,
+                }
+              : {}
+          }
+        />
+      </div>
       <WavePathBackground />
       <div
         style={{
@@ -135,6 +168,7 @@ export default function Index() {
                   </text>
                 </svg>
               </svg>
+              <Link href="/story">Story</Link>
             </div>
           </div>
         </div>

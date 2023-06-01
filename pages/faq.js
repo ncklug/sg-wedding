@@ -39,7 +39,7 @@ const FaqSection = (props) => (
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box as="span" flex="1" textAlign="left" fontSize="1.6em">
+        <Box as="span" flex="1" textAlign="left" fontSize="1.5em">
           {props.title}
         </Box>
         <AccordionIcon />
@@ -178,9 +178,10 @@ export default function Faq() {
                 <p
                   style={{ color: "grey", marginTop: "1em", fontSize: "0.7em" }}
                 >
-                  &#40;Bonus points for outfits that suit the "punk boho art
-                  gallery" aesthetic. Ask us for more details if you're
-                  curious&#41;
+                  <p>&#40;Bonus points for outfits that</p>
+                  <p>suit the "punk boho art gallery"</p>
+                  <p>aesthetic. Ask us for more</p>
+                  <p>details if you're curious&#41;</p>
                 </p>
               </FaqSection>
 

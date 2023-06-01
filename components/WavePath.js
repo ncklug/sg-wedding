@@ -22,7 +22,7 @@ export const WavePath = (props) => (
       width="100%"
       style={{
         transform: "translate3d(0, 0, 0)",
-        fontSize: "min(3em,36px)",
+        fontSize: "3rem",
         fill: props.fill,
       }}
     >

@@ -66,7 +66,7 @@ export default function Faq() {
           height: "100dvh",
           minWidth: 450,
           minHeight: `calc(${14 * numTopWaves}dvw + 450px)`,
-          fontSize: "0.8rem",
+          fontSize: "0.7rem",
           overflow: "hidden",
         }}
       >
@@ -80,7 +80,7 @@ export default function Faq() {
             <h1
               style={{
                 marginBottom: "0.5em",
-                fontSize: "2.5em",
+                fontSize: "2.9em",
                 marginLeft: "0.5em",
               }}
             >
@@ -88,14 +88,14 @@ export default function Faq() {
             </h1>
             <Accordion allowToggle>
               <FaqSection title="Dress Code">
-                <p>Dark colors</p>
+                <p>Dark Colors</p>
+                <p>Earth Tones</p>
                 <p>Neutrals</p>
-                <p>Earth tones</p>
                 <div
-                  style={{ color: "grey", marginTop: "1em", fontSize: "0.7em" }}
+                  style={{ color: "grey", marginTop: "1em", fontSize: "0.8em" }}
                 >
                   <p>&#40;Bonus points for outfits that suit</p>
-                  <p>the "street boho art exhibition"</p>
+                  <p>the "street-boho art exhibition"</p>
                   <p>aesthetic. Ask us for more</p>
                   <p>details if you're curious!&#41;</p>
                 </div>
@@ -122,7 +122,7 @@ export default function Faq() {
                     <div>4:00 pm</div>
                     <div>Ceremony</div>
                     <div>4:45 pm</div>
-                    <div>Reception</div>
+                    <div>High Tea Reception</div>
                     <div>6-ish pm</div>
                     <div>FIN.</div>
                   </div>

@@ -39,7 +39,7 @@ const FaqSection = (props) => (
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box as="span" flex="1" textAlign="left" fontSize="1.5rem">
+        <Box as="span" flex="1" textAlign="left" fontSize="1.6em">
           {props.title}
         </Box>
         <AccordionIcon />
@@ -157,7 +157,7 @@ export default function Faq() {
           flexDirection: "column",
           height: "100dvh",
           minWidth: 450,
-          minHeight: `calc(${14 * numTopWaves}dvw + 400px)`,
+          minHeight: `calc(${14 * numTopWaves}dvw + 450px)`,
           fontSize: "0.8rem",
           overflow: "hidden",
         }}
@@ -169,11 +169,15 @@ export default function Faq() {
           ))}
         <Card>
           <div>
-            <h1 style={{ marginBottom: "1em" }}>FAQ</h1>
+            <h1 style={{ marginBottom: "0.5em", fontSize: "2.5em" }}>FAQ</h1>
             <Accordion allowToggle>
               <FaqSection title="Dress Code">
-                <p>Dark colors, neutrals, earth tones</p>
-                <p style={{ color: "grey", marginTop: "1em" }}>
+                <p>Dark colors</p>
+                <p>Neutrals</p>
+                <p>Earth tones</p>
+                <p
+                  style={{ color: "grey", marginTop: "1em", fontSize: "0.7em" }}
+                >
                   &#40;Bonus points for outfits that suit the "punk boho art
                   gallery" aesthetic. Ask us for more details if you're
                   curious&#41;
@@ -198,7 +202,7 @@ export default function Faq() {
                     <div>4:45 pm</div>
                     <div>Reception</div>
                     <div>6-ish pm</div>
-                    <div>fin.</div>
+                    <div>FIN.</div>
                   </div>
                 </div>
               </FaqSection>
@@ -206,7 +210,8 @@ export default function Faq() {
                 <Box mb="2em">
                   <a href="https://www.google.com/maps/place/Lowercase/@1.3028042,103.8494325,17z/data=!3m2!4b1!5s0x31da19bbe3f56eb1:0x933756d15c1f6e6d!4m6!3m5!1s0x31da19bbe54f44ad:0xd56b9ca0edc99414!8m2!3d1.3028042!4d103.8520074!16s%2Fg%2F11b6nnjgnx?entry=ttu">
                     <p>Lowercase, Lasalle</p>
-                    <p>Blk D #01-01, 1 McNally St, 187940</p>
+                    <p>Blk D #01-01</p>
+                    <p>1 McNally St, 187940</p>
                   </a>
                 </Box>
                 For transport/parking information,{" "}

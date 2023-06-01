@@ -41,7 +41,7 @@ export default function Document() {
         style={{
           padding: 0,
           margin: 0,
-          fontFamily: '"Press Start 2P", cursive',
+          fontFamily: '"Press Start 2P", sans-serif',
         }}
       >
         <Main />

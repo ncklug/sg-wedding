@@ -5,25 +5,9 @@ import bablogo from "../assets/bablogo.png";
 import webFaq from "../assets/uwuwebFAQwhite.png";
 import backgroundHorizontal from "../assets/backgroundHorizontal.png";
 import backgroundVertical from "../assets/backgroundVertical.png";
-import {
-  extendTheme,
-  ChakraProvider,
-  defineStyleConfig,
-  Center,
-} from "@chakra-ui/react";
+import { ChakraProvider, Center } from "@chakra-ui/react";
 import { useWindowSize } from "@uidotdev/usehooks";
-
-// define the base component styles
-const baseTooltipStyle = {};
-
-// export the component theme
-export const tooltipTheme = defineStyleConfig({ baseStyle: baseTooltipStyle });
-
-const theme = extendTheme({
-  components: {
-    Tooltip: tooltipTheme,
-  },
-});
+import { theme } from "../components/theme";
 
 export default function Index() {
   const { width, height } = useWindowSize();

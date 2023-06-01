@@ -133,7 +133,8 @@ export default function Faq() {
                   <a href="https://www.google.com/maps/place/Lowercase/@1.3028042,103.8494325,17z/data=!3m2!4b1!5s0x31da19bbe3f56eb1:0x933756d15c1f6e6d!4m6!3m5!1s0x31da19bbe54f44ad:0xd56b9ca0edc99414!8m2!3d1.3028042!4d103.8520074!16s%2Fg%2F11b6nnjgnx?entry=ttu">
                     <p>Lowercase, Lasalle</p>
                     <p>Blk D #01-01</p>
-                    <p>1 McNally St, 187940</p>
+                    <p>1 McNally St</p>
+                    <p>187940</p>
                   </a>
                 </Box>
                 For transport/parking information,{" "}

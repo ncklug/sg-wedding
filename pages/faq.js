@@ -64,7 +64,7 @@ export default function Faq() {
         style={{
           flexDirection: "column",
           height: "100dvh",
-          minWidth: 450,
+          minWidth: 350,
           minHeight: `calc(${14 * numTopWaves}dvw + 450px)`,
           fontSize: "0.7rem",
           overflow: "hidden",

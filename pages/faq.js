@@ -13,24 +13,29 @@ import {
 } from "@chakra-ui/react";
 
 const Card = (props) => (
-  <div
-    style={{
-      backgroundColor: "black",
-      color: "white",
-      padding: "2em 3em",
-      width: "100%",
-      textAlign: "center",
-      display: "flex",
-      justifyContent: "center",
-    }}
-  >
+  <div style={{ display: "flex", justifyContent: "center" }}>
     <div
       style={{
-        maxWidth: 800,
-        flex: 1,
+        flex: "0 1 500px",
+        backgroundColor: "black",
+        color: "white",
+        padding: "2em 6em",
+        // width: "fit-content",
+        textAlign: "center",
+        // display: "flex",
+        // justifyContent: "center",
       }}
     >
+      {/* <div
+        style={
+          {
+            // maxWidth: 500,
+            // flex: 1,
+          }
+        }
+      > */}
       {props.children}
+      {/* </div> */}
     </div>
   </div>
 );
@@ -51,30 +56,34 @@ const FaqSection = (props) => (
 
 export default function Faq() {
   const { width, height } = useWindowSize();
-  let numTopWaves = 1;
-  if (width < 900) {
-    numTopWaves++;
-  }
-  if (width < 500) {
-    numTopWaves++;
-  }
+  const numWaves = height == null ? 0 : Math.floor((height * 8) / width);
+  let numTopWaves = 3;
+  // if (width < 900) {
+  //   numTopWaves++;
+  // }
+  // if (width < 500) {
+  //   numTopWaves++;
+  // }
   return (
     <ChakraProvider theme={theme}>
       <div
         style={{
           flexDirection: "column",
-          height: "100dvh",
+          // height: "100dvh",
           minWidth: 350,
-          minHeight: `calc(${14 * numTopWaves}dvw + 450px)`,
+          // minHeight: `calc(14dvw + 450px)`,
+          minHeight: `40em`,
           fontSize: "0.7rem",
+          marginTop: "20dvh",
+          // alignItems: "center",
           overflow: "hidden",
         }}
       >
-        {Array(numTopWaves)
+        {/* {Array(numTopWaves)
           .fill()
           .map((_, i) => (
             <WavePath offset={i} fill="black" />
-          ))}
+          ))} */}
         <Card>
           <div>
             <h1
@@ -138,24 +147,32 @@ export default function Faq() {
                     <p>187940</p>
                   </a>
                 </Box>
-                For transport/parking information,{" "}
-                <a href="https://www.lasalle.edu.sg/institute-of-contemporary-arts-sg/visit-ica-singapore/getting-here">
-                  click here
-                </a>
+                <div>Transport/parking </div>
+                <div>information</div>
+                <div>
+                  <a href="https://www.lasalle.edu.sg/institute-of-contemporary-arts-sg/visit-ica-singapore/getting-here">
+                    click here
+                  </a>
+                </div>
               </FaqSection>
             </Accordion>
           </div>
         </Card>
-        {/* {Array().fill(0).map((_, i) => 
-        )} */}
-        <WavePath offset={0} fill="black" />
-        <WavePath offset={1} fill="black" />
-        <WavePath offset={2} fill="black" />
-        <WavePath offset={3} fill="black" />
-        <WavePath offset={4} fill="black" />
-        <WavePath offset={5} fill="black" />
-        <WavePath offset={6} fill="black" />
-        <WavePath offset={9} fill="black" />
+        <div style={{ position: "fixed", top: 0, zIndex: -1 }}>
+          {Array(numWaves)
+            .fill(0)
+            .map((_, i) => (
+              <WavePath offset={i % 2} fill="black" />
+            ))}
+
+          {/* <WavePath offset={1} fill="black" />
+          <WavePath offset={0} fill="black" />
+          <WavePath offset={1} fill="black" />
+          <WavePath offset={0} fill="black" />
+          <WavePath offset={1} fill="black" />
+          <WavePath offset={0} fill="black" />
+          <WavePath offset={1} fill="black" /> */}
+        </div>
       </div>
     </ChakraProvider>
   );

@@ -63,23 +63,6 @@ export default function Index() {
             </Link>
           </div>
         </Center>
-        {/* <div
-          style={
-            height != null
-              ? {
-                  height,
-                  width,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  backgroundImage:
-                    width > height
-                      ? `url("${backgroundHorizontal.src}")`
-                      : `url("${backgroundVertical.src}")`,
-                }
-              : {}
-          }
-        /> */}
       </div>
     </ChakraProvider>
   );

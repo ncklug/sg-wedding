@@ -94,11 +94,11 @@ export default function Faq() {
                 <div
                   style={{ color: "grey", marginTop: "1em", fontSize: "0.8em" }}
                 >
-                  <p>&#40;Bonus points for outfits</p>
-                  <p>that suit the "street-boho </p>
-                  <p>art exhibition" aesthetic.</p>
-                  <p>Ask us for more details if</p>
-                  <p>you're curious!&#41;</p>
+                  <p>&#40;+Bonus points for</p>
+                  <p>outfits that suit the</p>
+                  <p>"street-boho art exhibition"</p>
+                  <p>aesthetic. Ask us for more</p>
+                  <p>details if you're curious!&#41;</p>
                 </div>
               </FaqSection>
 

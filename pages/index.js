@@ -8,8 +8,11 @@ import backgroundVertical from "../assets/backgroundVertical.png";
 import { ChakraProvider, Center } from "@chakra-ui/react";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { theme } from "../components/theme";
+import { useEffect, useRef, useState } from "react";
 
 export default function Index() {
+  const [pulseFactor, setPulseFactor] = useState(1);
+  const clearTimeoutRef = useRef();
   const { width, height } = useWindowSize();
   const isHorizontal = width > height;
   const imageMeta = isHorizontal ? backgroundHorizontal : backgroundVertical;
@@ -22,7 +25,24 @@ export default function Index() {
         ? { height: height, width: height * imageRatio }
         : { width: width, height: width / imageRatio };
   }
-  const faqRatio = isHorizontal ? 2.5 : 3;
+  useEffect(() => {
+    if (clearTimeoutRef.current) {
+      clearTimeout(clearTimeoutRef.current);
+      clearTimeoutRef.current = undefined;
+    }
+    clearTimeoutRef.current = setTimeout(
+      () => {
+        setPulseFactor((prev) => (prev === 1 ? prev * 1.05 : 1));
+      },
+      pulseFactor === 1 ? 500 : 70
+    );
+  }, [pulseFactor]);
+  const faqRatio = (1.2 * (isHorizontal ? 2.5 : 3)) / pulseFactor;
+  const heartWidth = (webFaq.width * (size.width / imageMeta.width)) / faqRatio;
+  const heartHeight =
+    (webFaq.height * (size.height / imageMeta.height)) / faqRatio;
+  const heartWidthOffset = (heartWidth - heartWidth * pulseFactor) / 2;
+  const heartHeightOffset = (heartHeight - heartHeight * pulseFactor) / 2;
 
   return (
     <ChakraProvider theme={theme}>
@@ -45,19 +65,19 @@ export default function Index() {
               style={{
                 position: "relative",
                 zIndex: 1,
-                top: -size.height + size.height * (isHorizontal ? 0.44 : 0.47),
-                left: size.width * (isHorizontal ? 0.22 : 0.65),
+                top:
+                  heartHeightOffset -
+                  size.height +
+                  size.height * (isHorizontal ? 0.44 : 0.47),
+                left:
+                  heartWidthOffset + size.width * (isHorizontal ? 0.22 : 0.65),
                 transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
               }}
             >
               <Image
                 style={{}}
-                width={
-                  (webFaq.width * (size.width / imageMeta.width)) / faqRatio
-                }
-                height={
-                  (webFaq.height * (size.height / imageMeta.height)) / faqRatio
-                }
+                width={heartWidth}
+                height={heartHeight}
                 src={webFaq}
               />
             </Link>

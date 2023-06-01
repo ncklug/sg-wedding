@@ -155,7 +155,7 @@ export default function Faq() {
       <div
         style={{
           flexDirection: "column",
-          height: "100vh",
+          height: "100dvh",
           minWidth: 450,
           minHeight: `calc(${14 * numTopWaves}dvw + 400px)`,
           fontSize: "0.8rem",

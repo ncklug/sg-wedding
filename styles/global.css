@@ -7,3 +7,7 @@ a:visited {
     text-decoration: none;
     color: #fa94e5;
 }
+
+.chakra-accordion__button {
+    font-size: inherit !important;
+}

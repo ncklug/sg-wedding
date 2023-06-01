@@ -16,10 +16,11 @@ const Card = (props) => (
   <div style={{ display: "flex", justifyContent: "center" }}>
     <div
       style={{
-        flex: "0 1 500px",
+        flex: "0 1 38em",
         backgroundColor: "black",
         color: "white",
-        padding: "2em 6em",
+        padding: "2em min(6em, 8dvw)",
+        marginBottom: "1em",
         // width: "fit-content",
         textAlign: "center",
         // display: "flex",
@@ -57,7 +58,7 @@ const FaqSection = (props) => (
 export default function Faq() {
   const { width, height } = useWindowSize();
   const numWaves = height == null ? 0 : Math.floor((height * 8) / width);
-  let numTopWaves = 3;
+  // let numTopWaves = 3;
   // if (width < 900) {
   //   numTopWaves++;
   // }
@@ -72,8 +73,8 @@ export default function Faq() {
           // height: "100dvh",
           minWidth: 350,
           // minHeight: `calc(14dvw + 450px)`,
-          minHeight: `40em`,
-          fontSize: "max(0.7rem, 2dvw)",
+          // minHeight: `34em`,
+          fontSize: "max(0.7rem, 1.2dvw)",
           marginTop: "20dvh",
           // alignItems: "center",
           overflow: "hidden",
@@ -95,13 +96,21 @@ export default function Faq() {
             >
               FAQ
             </h1>
-            <Accordion allowToggle>
+            <Accordion
+              allowToggle
+              // onChange={() => {
+              //   setTimeout(
+              //     () => window.scrollTo(0, document.body.scrollHeight),
+              //     200
+              //   );
+              // }}
+            >
               <FaqSection title="Dress Code">
                 <p>Dark Colors</p>
                 <p>Earth Tones</p>
                 <p>Neutrals</p>
                 <div
-                  style={{ color: "grey", marginTop: "1em", fontSize: "0.8em" }}
+                  style={{ color: "grey", marginTop: "1em", fontSize: "0.6em" }}
                 >
                   <p>&#40;+Bonus points for</p>
                   <p>outfits that suit the</p>

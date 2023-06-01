@@ -16,7 +16,9 @@ const Card = (props) => (
   <div style={{ display: "flex", justifyContent: "center" }}>
     <div
       style={{
-        flex: "0 1 500px",
+        flex: "0 1 20em",
+        maxWidth: "30em",
+        minWidth: 350,
         backgroundColor: "black",
         color: "white",
         padding: "2em 6em",
@@ -73,7 +75,7 @@ export default function Faq() {
           minWidth: 350,
           // minHeight: `calc(14dvw + 450px)`,
           minHeight: `40em`,
-          fontSize: "0.7rem",
+          fontSize: "max(0.7rem,1.5dvw)",
           marginTop: "20dvh",
           // alignItems: "center",
           overflow: "hidden",

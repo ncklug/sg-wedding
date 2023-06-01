@@ -8,6 +8,7 @@ export const WavePath = (props) => (
     viewBox="0 0 1098.72 37"
     style={
       {
+        // fontSize:
         //   position: "absolute",
         //   top: `calc(-120px + ${props.offset * 14 || 0}dvh`,
       }
@@ -22,7 +23,7 @@ export const WavePath = (props) => (
       width="100%"
       style={{
         transform: "translate3d(0, 0, 0)",
-        fontSize: "3em",
+        fontSize: "min(3em, 6dvw, 40px)",
         fill: props.fill,
       }}
     >

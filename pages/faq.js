@@ -73,7 +73,7 @@ export default function Faq() {
           minWidth: 350,
           // minHeight: `calc(14dvw + 450px)`,
           minHeight: `40em`,
-          fontSize: "0.7rem",
+          fontSize: "max(0.7rem, 2dvw)",
           marginTop: "20dvh",
           // alignItems: "center",
           overflow: "hidden",

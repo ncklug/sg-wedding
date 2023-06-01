@@ -149,6 +149,7 @@ export default function Faq() {
           height: "100vh",
           minWidth: 450,
           overflow: "hidden",
+          fontSize: "0.8rem",
         }}
       >
         <WavePath offset={0} fill="black" />
@@ -176,8 +177,6 @@ export default function Faq() {
                       gap: "1em 2em",
                     }}
                   >
-                    <div>3:30 pm</div>
-                    <div>Arrival</div>
                     <div>3:45 pm</div>
                     <div>Seating</div>
                     <div>4:00 pm</div>

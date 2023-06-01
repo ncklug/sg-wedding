@@ -45,13 +45,21 @@ const FaqSection = (props) => (
   <AccordionItem>
     <h2>
       <AccordionButton>
-        <Box as="span" flex="1" textAlign="center" fontSize="1.4em">
+        <Box
+          as="span"
+          flex="1"
+          textAlign="center"
+          fontSize="1.4em"
+          // color="#bfbfbf"
+        >
           {props.title}
         </Box>
         <AccordionIcon />
       </AccordionButton>
     </h2>
-    <AccordionPanel pb={4}>{props.children}</AccordionPanel>
+    <AccordionPanel pb={4} color="#9f9f9f">
+      {props.children}
+    </AccordionPanel>
   </AccordionItem>
 );
 
@@ -110,7 +118,11 @@ export default function Faq() {
                 <p>Earth Tones</p>
                 <p>Neutrals</p>
                 <div
-                  style={{ color: "grey", marginTop: "1em", fontSize: "0.6em" }}
+                  style={{
+                    color: "#606060",
+                    marginTop: "1em",
+                    fontSize: "0.6em",
+                  }}
                 >
                   <p>&#40;+Bonus points for</p>
                   <p>outfits that suit the</p>

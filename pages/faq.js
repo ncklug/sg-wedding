@@ -1,6 +1,7 @@
 import { WavePath } from "../components/WavePath";
 import { ChakraProvider, Center } from "@chakra-ui/react";
 import { theme } from "../components/theme";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 import {
   Accordion,
@@ -141,6 +142,14 @@ const FaqSection = (props) => (
 // }
 
 export default function Faq() {
+  const { width, height } = useWindowSize();
+  let numTopWaves = 1;
+  if (width < 900) {
+    numTopWaves++;
+  }
+  if (width < 500) {
+    numTopWaves++;
+  }
   return (
     <ChakraProvider theme={theme}>
       <div
@@ -148,11 +157,16 @@ export default function Faq() {
           flexDirection: "column",
           height: "100vh",
           minWidth: 450,
-          overflow: "hidden",
+          minHeight: `calc(${14 * numTopWaves}dvw + 400px)`,
           fontSize: "0.8rem",
+          overflow: "hidden",
         }}
       >
-        <WavePath offset={0} fill="black" />
+        {Array(numTopWaves)
+          .fill()
+          .map((_, i) => (
+            <WavePath offset={i} fill="black" />
+          ))}
         <Card>
           <div>
             <h1 style={{ marginBottom: "1em" }}>FAQ</h1>
@@ -212,8 +226,6 @@ export default function Faq() {
         <WavePath offset={4} fill="black" />
         <WavePath offset={5} fill="black" />
         <WavePath offset={6} fill="black" />
-        <WavePath offset={7} fill="black" />
-        <WavePath offset={8} fill="black" />
         <WavePath offset={9} fill="black" />
       </div>
     </ChakraProvider>

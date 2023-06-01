@@ -1,15 +1,17 @@
-const WavePathBackground = (props) =>
+export const WavePathBackground = (props) =>
   [0, 1, 2, 5, 6, 7].map((n) => <WavePath offset={n} />);
 
-const WavePath = (props) => (
+export const WavePath = (props) => (
   <svg
-    width="100vw"
-    height="14em"
+    width="100%"
+    height="8em"
     viewBox="0 0 1098.72 37"
-    style={{
-      position: "absolute",
-      top: `calc(-120px + ${props.offset * 14 || 0}dvh`,
-    }}
+    style={
+      {
+        //   position: "absolute",
+        //   top: `calc(-120px + ${props.offset * 14 || 0}dvh`,
+      }
+    }
   >
     <path
       id="curve"
@@ -21,7 +23,7 @@ const WavePath = (props) => (
       style={{
         transform: "translate3d(0, 0, 0)",
         fontSize: "3em",
-        fill: "white",
+        fill: props.fill,
       }}
     >
       <textPath
@@ -36,7 +38,7 @@ const WavePath = (props) => (
           from={`-${100 + props.offset * 20}%`}
           to={`-${props.offset * 20}%`}
           begin="0s"
-          dur="3s"
+          dur="5s"
           repeatCount="indefinite"
         />
       </textPath>

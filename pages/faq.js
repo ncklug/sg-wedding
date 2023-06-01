@@ -19,7 +19,7 @@ const Card = (props) => (
       color: "white",
       padding: "2em 3em",
       width: "100%",
-      textAlign: "center",
+      // textAlign: "center",
       display: "flex",
       justifyContent: "center",
     }}
@@ -169,24 +169,37 @@ export default function Faq() {
           ))}
         <Card>
           <div>
-            <h1 style={{ marginBottom: "0.5em", fontSize: "2.5em" }}>FAQ</h1>
+            <h1
+              style={{
+                marginBottom: "0.5em",
+                fontSize: "2.5em",
+                marginLeft: "0.5em",
+              }}
+            >
+              FAQ
+            </h1>
             <Accordion allowToggle>
               <FaqSection title="Dress Code">
                 <p>Dark colors</p>
                 <p>Neutrals</p>
                 <p>Earth tones</p>
-                <p
+                <div
                   style={{ color: "grey", marginTop: "1em", fontSize: "0.7em" }}
                 >
                   <p>&#40;Bonus points for outfits that</p>
                   <p>suit the "punk boho art gallery"</p>
                   <p>aesthetic. Ask us for more</p>
                   <p>details if you're curious&#41;</p>
-                </p>
+                </div>
               </FaqSection>
 
               <FaqSection title="Schedule">
-                <div style={{ display: "flex", justifyContent: "center" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    // justifyContent: "center"
+                  }}
+                >
                   <div
                     style={{
                       display: "grid",

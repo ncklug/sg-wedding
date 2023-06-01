@@ -59,7 +59,10 @@ export default function Home() {
           <CardSection>
             <h2 id="dresscode">Dress Code</h2>
             <p>Dark colors, neutrals, earth tones</p>
-            {/* <p style={{ color: "grey" }}>If desired, "punk boho"</p> */}
+            <p style={{ color: "grey" }}>
+              &#40;Bonus points for outfits that suit the "punk boho"
+              aesthetic&#41;
+            </p>
           </CardSection>
           <CardSection>
             <h2 id="schedule" style={{ marginBottom: "1em" }}>

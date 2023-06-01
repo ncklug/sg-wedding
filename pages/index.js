@@ -50,21 +50,24 @@ export default function Index() {
           position: "absolute",
           zIndex: -1,
           backgroundColor: "black",
+          overflow: "hidden",
         }}
       >
         <Center h="100dvh" w="100dvw">
           <div style={size}>
             <Image {...size} src={imageMeta} />
-            <Link href="/faq">
+            <Link
+              href="/faq"
+              style={{
+                position: "relative",
+                zIndex: 1,
+                top: -size.height + size.height * (isHorizontal ? 0.44 : 0.47),
+                left: size.width * (isHorizontal ? 0.22 : 0.65),
+                transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
+              }}
+            >
               <Image
-                style={{
-                  position: "relative",
-                  zIndex: 1,
-                  top:
-                    -size.height + size.height * (isHorizontal ? 0.44 : 0.47),
-                  left: size.width * (isHorizontal ? 0.22 : 0.65),
-                  transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
-                }}
+                style={{}}
                 width={
                   (webFaq.width * (size.width / imageMeta.width)) / faqRatio
                 }

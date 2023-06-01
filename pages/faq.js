@@ -97,7 +97,7 @@ export default function Faq() {
                   <p>&#40;Bonus points for outfits that suit</p>
                   <p>the "street boho art exhibition"</p>
                   <p>aesthetic. Ask us for more</p>
-                  <p>details if you're curious&#41;</p>
+                  <p>details if you're curious!&#41;</p>
                 </div>
               </FaqSection>
 

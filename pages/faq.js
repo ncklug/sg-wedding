@@ -20,7 +20,6 @@ const Card = (props) => (
         backgroundColor: "black",
         color: "white",
         padding: "2em 6em",
-        // width: "fit-content",
         textAlign: "center",
         // display: "flex",
         // justifyContent: "center",

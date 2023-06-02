@@ -32,7 +32,7 @@ export const WavePath = (props) => (
         xlinkHref="#curve"
         id="text-path"
       >
-        {"FAITH & NATHAN & ".repeat(5)}
+        {"FAITH X NATHAN X ".repeat(5)}
         <animate
           attributeName="startOffset"
           from={`-${100 + props.offset * 20}%`}

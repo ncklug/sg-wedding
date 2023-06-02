@@ -36,7 +36,7 @@ export const Door = ({ onOpen, style, ...passthroughProps }) => {
     <Image
       src={DOORS[doorIdx]}
       onClick={() => setDoorIdx((prev) => (prev > 1 ? prev : 2))}
-      width={35}
+      // width="2em"
       style={{ ...style }}
       {...passthroughProps}
     />

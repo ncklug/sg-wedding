@@ -127,11 +127,11 @@ export default function Faq() {
                     fontSize: "0.6em",
                   }}
                 >
-                  <p>&#40;+Bonus points for</p>
-                  <p>outfits that suit the</p>
-                  <p>"street-boho art exhibition"</p>
-                  <p>aesthetic. Ask us for more</p>
-                  <p>details if you're curious!&#41;</p>
+                  <p>&#40;+Bonus points for "street-boho</p>
+                  <p>outfits that you would wear to</p>
+                  <p>an art exhibition" aesthetic.</p>
+                  <p>Ask us for more details</p>
+                  <p>if you're curious!&#41;</p>
                 </div>
               </FaqSection>
 

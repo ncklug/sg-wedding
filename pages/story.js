@@ -31,9 +31,12 @@ export default function Home() {
       }}
     >
       <div style={{ display: "flex", flexDirection: "column", gap: "0em" }}>
+        <Paragraph style={{ marginBottom: "3em" }}>
+          ...and that's how they met.
+        </Paragraph>
         <Paragraph>
-          <Paragraph>...and that's how they met.</Paragraph>
-          She just wandered through his front door during dinner...
+          Her good friend was staying in his house, so when she came to visit,
+          she just walked through his front door one day during dinner
           <Aside>
             "Who is this white boy hosting mala hot pot?", she thought to
             herself...
@@ -43,17 +46,18 @@ export default function Home() {
           Later that evening, he gave her a tour of his house, sharing about his
           dreams for it to become a place of community and hospitality. To his
           surprise, what began as an opportunity for him to share his vision
-          turned into a collaboration as she opened up about her own dreams for
-          what community could be.
+          turned into a deeper conversation as she opened up about her own
+          dreams for what community could be.
           <Aside>
-            At one point, he got so excited that he went to hug her, forgetting
-            that they had only just met 30 minutes prior, which he then
-            retracted and turned into the most awkward high-five...
+            At one point, he got so excited that he attempted to give her a hug,
+            forgetting that they had only just met 30 minutes prior, whereupon
+            he then retracted said hug and turned it into the most awkward
+            high-five...
           </Aside>
         </Paragraph>
         <Paragraph>
           At this point he knew there was something special about her, but could
-          also tell that she was much cooler than he was. He tried to play it
+          also tell that she was much cooler than himself. He tried to play it
           cool while also taking every chance he could to talk with her more
           over the short 5 days she was in Seattle.
           <Aside>

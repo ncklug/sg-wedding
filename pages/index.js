@@ -70,21 +70,17 @@ export default function Index() {
                 top:
                   heartHeightOffset -
                   size.height +
-                  size.height * (isHorizontal ? 0.44 : 0.47),
+                  size.height * (isHorizontal ? 0.5 : 0.47),
                 left:
-                  heartWidthOffset + size.width * (isHorizontal ? 0.22 : 0.65),
+                  heartWidthOffset + size.width * (isHorizontal ? 0.25 : 0.65),
                 transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
               }}
             >
-              <Image
-                style={{}}
-                width={heartWidth}
-                height={heartHeight}
-                src={webFaq}
-              />
+              <Image width={heartWidth} height={heartHeight} src={webFaq} />
             </Link>
             <Door
               onOpen={() => router.push("/story")}
+              width={isHorizontal ? baseHeartHeight / 4 : baseHeartHeight / 7}
               style={{
                 cursor: "pointer",
                 position: "relative",
@@ -92,8 +88,8 @@ export default function Index() {
                 top:
                   -size.height -
                   heartHeight +
-                  size.height * (isHorizontal ? 0.64 : 0.45),
-                left: size.width * (isHorizontal ? 0.12 : 0.04),
+                  size.height * (isHorizontal ? 0.32 : 0.29),
+                left: size.width * (isHorizontal ? 0.05 : 0.04),
               }}
             />
           </div>

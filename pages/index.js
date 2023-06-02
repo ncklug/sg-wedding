@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import bablogo from "../assets/bablogo.png";
 import webFaq from "../assets/uwuwebFAQwhite.png";
 import backgroundHorizontal from "../assets/backgroundHorizontal.png";
 import backgroundVertical from "../assets/backgroundVertical.png";
 import { ChakraProvider, Center } from "@chakra-ui/react";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { theme } from "../components/theme";
+import { Door } from "../components/Door";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Index() {
   const [pulseFactor, setPulseFactor] = useState(1);
@@ -39,10 +40,11 @@ export default function Index() {
   }, [pulseFactor]);
   const faqRatio = (1.2 * (isHorizontal ? 2.5 : 3)) / pulseFactor;
   const heartWidth = (webFaq.width * (size.width / imageMeta.width)) / faqRatio;
-  const heartHeight =
-    (webFaq.height * (size.height / imageMeta.height)) / faqRatio;
+  const baseHeartHeight = webFaq.height * (size.height / imageMeta.height);
+  const heartHeight = baseHeartHeight / faqRatio;
   const heartWidthOffset = (heartWidth - heartWidth * pulseFactor) / 2;
   const heartHeightOffset = (heartHeight - heartHeight * pulseFactor) / 2;
+  const router = useRouter();
 
   return (
     <ChakraProvider theme={theme}>
@@ -81,6 +83,19 @@ export default function Index() {
                 src={webFaq}
               />
             </Link>
+            <Door
+              onOpen={() => router.push("/story")}
+              style={{
+                cursor: "pointer",
+                position: "relative",
+                zIndex: 2,
+                top:
+                  -size.height -
+                  heartHeight +
+                  size.height * (isHorizontal ? 0.64 : 0.45),
+                left: size.width * (isHorizontal ? 0.12 : 0.04),
+              }}
+            />
           </div>
         </Center>
       </div>

@@ -17,7 +17,7 @@ const Card = (props) => (
     <div
       style={{
         flex: "0 1 38em",
-        maxWidth: "95dvh",
+        maxWidth: "85dvh",
         backgroundColor: "black",
         color: "white",
         padding: "2em min(6em, 8dvw)",

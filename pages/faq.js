@@ -182,7 +182,7 @@ export default function Faq() {
             </Accordion>
           </div>
         </Card>
-        <div style={{ position: "fixed", top: 0, zIndex: -1 }}>
+        <div style={{ position: "fixed", top: 0, zIndex: -1, width: "100dvw" }}>
           {Array(numWaves)
             .fill(0)
             .map((_, i) => (

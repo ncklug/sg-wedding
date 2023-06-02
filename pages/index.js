@@ -45,10 +45,12 @@ export default function Index() {
   const heartWidthOffset = (heartWidth - heartWidth * pulseFactor) / 2;
   const heartHeightOffset = (heartHeight - heartHeight * pulseFactor) / 2;
   const router = useRouter();
+
+  const totalNumArrows = isHorizontal ? 4 : 2;
   const [arrowCount, setArrowCount] = useState(0);
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setArrowCount((prev) => (prev + 1) % 4);
+      setArrowCount((prev) => (prev + 1) % totalNumArrows);
     }, 400);
     return () => clearTimeout(timeoutId);
   }, [arrowCount]);
@@ -74,8 +76,8 @@ export default function Index() {
               style={{
                 position: "relative",
                 zIndex: 1,
-                top: -size.height + size.height * (isHorizontal ? 0.4 : 0.47),
-                left: size.width * (isHorizontal ? 0.14 : 0.65),
+                top: -size.height + size.height * (isHorizontal ? 0.4 : 0.3),
+                left: size.width * (isHorizontal ? 0.14 : 0.15),
               }}
             >
               <div
@@ -85,13 +87,15 @@ export default function Index() {
                   color: "white",
                 }}
               >
-                <div style={{ fontSize: "2em" }}>
-                  {Array(4)
+                <div style={{ fontSize: isHorizontal ? "2em" : "1.2em" }}>
+                  {Array(totalNumArrows)
                     .fill()
                     .map((_, i) => (
                       <span
                         style={
-                          2 - i < arrowCount ? {} : { visibility: "hidden" }
+                          totalNumArrows - 2 - i < arrowCount
+                            ? {}
+                            : { visibility: "hidden" }
                         }
                       >
                         &lt;

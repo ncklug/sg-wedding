@@ -56,10 +56,10 @@ export default function Home() {
           </Aside>
         </Paragraph>
         <Paragraph>
-          At this point he knew there was something special about her, but could
-          also tell that she was much cooler than himself. He tried to play it
-          cool while also taking every chance he could to talk with her more
-          over the short 5 days she was in Seattle.
+          At this point he knew there was something special about her, but found
+          himself a bit out of his depth to match her vibe and style game. He
+          tried to play it cool while also taking every chance he could to talk
+          with her more over the short 5 days she was in Seattle.
           <Aside>
             What he didn't realize was that she was direct enough that "playing
             it cool" just came across as uninterested... So much for his one
@@ -68,10 +68,11 @@ export default function Home() {
         </Paragraph>
         <Paragraph>
           By the end of the 4th day after meeting each other, they both knew
-          they couldn't just let this go when she left. He last-minute took
-          vacation to follow her to LA for the 4 days she was there, she came
-          back to Seattle a couple months later for American Thanksgiving, and
-          then he flew to Singapore for Chinese New Year and met her parents.
+          they couldn't just let this go when she left. This non-spontaneous boy
+          took a spontaneous vacation to follow her to LA for the 4 days she was
+          there, she came back to Seattle a couple months later for American
+          Thanksgiving, and then he flew to Singapore for Chinese New Year and
+          met her parents.
           <Aside>
             All the while, whenever they weren't in person, they spent most of
             their free time on video chats getting to know each other. They were

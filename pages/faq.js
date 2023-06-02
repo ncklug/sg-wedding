@@ -188,14 +188,6 @@ export default function Faq() {
             .map((_, i) => (
               <WavePath offset={i % 2} fill="black" />
             ))}
-
-          {/* <WavePath offset={1} fill="black" />
-          <WavePath offset={0} fill="black" />
-          <WavePath offset={1} fill="black" />
-          <WavePath offset={0} fill="black" />
-          <WavePath offset={1} fill="black" />
-          <WavePath offset={0} fill="black" />
-          <WavePath offset={1} fill="black" /> */}
         </div>
       </div>
     </ChakraProvider>

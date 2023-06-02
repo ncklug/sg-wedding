@@ -16,8 +16,10 @@ const Card = (props) => (
   <div style={{ display: "flex", justifyContent: "center" }}>
     <div
       style={{
-        flex: "0 1 38em",
-        maxWidth: "85dvh",
+        // flex: "0 1 33em",
+        width: "50%",
+        minWidth: "33em",
+        maxWidth: "95dvh",
         backgroundColor: "black",
         color: "white",
         padding: "2em min(6em, 8dvw)",

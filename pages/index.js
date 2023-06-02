@@ -45,7 +45,15 @@ export default function Index() {
   const heartWidthOffset = (heartWidth - heartWidth * pulseFactor) / 2;
   const heartHeightOffset = (heartHeight - heartHeight * pulseFactor) / 2;
   const router = useRouter();
+  const [arrowCount, setArrowCount] = useState(0);
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setArrowCount((prev) => (prev + 1) % 4);
+    }, 400);
+    return () => clearTimeout(timeoutId);
+  }, [arrowCount]);
 
+  console.log({ arrowCount });
   return (
     <ChakraProvider theme={theme}>
       <Head>
@@ -62,15 +70,50 @@ export default function Index() {
         <Center h="100dvh" w="100dvw">
           <div style={size}>
             <Image {...size} src={imageMeta} />
+            <div
+              style={{
+                position: "relative",
+                zIndex: 1,
+                top: -size.height + size.height * (isHorizontal ? 0.4 : 0.47),
+                left: size.width * (isHorizontal ? 0.14 : 0.65),
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  color: "white",
+                }}
+              >
+                <div style={{ fontSize: "2em" }}>
+                  {Array(4)
+                    .fill()
+                    .map((_, i) => (
+                      <span
+                        style={
+                          2 - i < arrowCount ? {} : { visibility: "hidden" }
+                        }
+                      >
+                        &lt;
+                      </span>
+                    ))}
+                </div>
+                <div>
+                  <div>Our</div>
+                  <div>Story</div>
+                </div>
+              </div>
+            </div>
             <Link
               href="/faq"
               style={{
                 position: "relative",
                 zIndex: 1,
-                top:
+                top: `calc(${
                   heartHeightOffset -
                   size.height +
-                  size.height * (isHorizontal ? 0.5 : 0.47),
+                  size.height * (isHorizontal ? 0.52 : 0.47)
+                }px - 3em)`,
                 left:
                   heartWidthOffset + size.width * (isHorizontal ? 0.25 : 0.65),
                 transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
@@ -85,10 +128,11 @@ export default function Index() {
                 cursor: "pointer",
                 position: "relative",
                 zIndex: 2,
-                top:
+                top: `calc(${
                   -size.height -
                   heartHeight +
-                  size.height * (isHorizontal ? 0.32 : 0.29),
+                  size.height * (isHorizontal ? 0.32 : 0.29)
+                }px - 3em)`,
                 left: size.width * (isHorizontal ? 0.05 : 0.04),
               }}
             />

@@ -1,3 +1,6 @@
+import door6 from "../assets/door_6.png";
+import Image from "next/image";
+
 const Paragraph = (props) => (
   <div
     style={{
@@ -31,15 +34,16 @@ export default function Home() {
       }}
     >
       <div style={{ display: "flex", flexDirection: "column", gap: "0em" }}>
+        <Image src={door6} width="55" />
+
         <Paragraph style={{ marginBottom: "3em" }}>
           ...and that's how they met.
         </Paragraph>
         <Paragraph>
-          Her good friend was staying in his house, so when she came to visit,
-          she just walked through his front door one day during dinner
+          Her good friend was his housemate, so when she visited Seattle, she
+          just walked through his front door one day during dinner
           <Aside>
-            "Who is this white boy hosting mala hot pot?", she thought to
-            herself...
+            "This white boy is hosting mala hot pot!", she thought to herself...
           </Aside>
         </Paragraph>
         <Paragraph>
@@ -78,8 +82,8 @@ export default function Home() {
             their free time on video chats getting to know each other. They were
             simultaneously befuddled and intrigued that they had found someone
             who they felt made so little sense and yet so much sense. They were
-            determined to go deeper until they really understood the other
-            person, and haven't stopped since...
+            determined to really understand the other person and solve the
+            mystery, and haven't stopped since ...
           </Aside>
         </Paragraph>
         <Paragraph>

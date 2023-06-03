@@ -46,7 +46,7 @@ export default function Index() {
   const heartHeightOffset = (heartHeight - heartHeight * pulseFactor) / 2;
   const router = useRouter();
 
-  const totalNumArrows = isHorizontal ? 4 : 2;
+  const totalNumArrows = isHorizontal ? 5 : 3;
   const [arrowCount, setArrowCount] = useState(0);
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -88,7 +88,7 @@ export default function Index() {
                 }}
               >
                 <div style={{ fontSize: isHorizontal ? "2em" : "1.2em" }}>
-                  {Array(totalNumArrows)
+                  {Array(totalNumArrows - 1)
                     .fill()
                     .map((_, i) => (
                       <span
@@ -102,7 +102,7 @@ export default function Index() {
                       </span>
                     ))}
                 </div>
-                <div>
+                <div style={isHorizontal ? {} : { fontSize: "0.6em" }}>
                   <div>Our</div>
                   <div>Story</div>
                 </div>
@@ -116,7 +116,7 @@ export default function Index() {
                 top: `calc(${
                   heartHeightOffset -
                   size.height +
-                  size.height * (isHorizontal ? 0.52 : 0.47)
+                  size.height * (isHorizontal ? 0.52 : 0.5)
                 }px - 3em)`,
                 left:
                   heartWidthOffset + size.width * (isHorizontal ? 0.25 : 0.65),

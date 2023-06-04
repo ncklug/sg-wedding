@@ -5,7 +5,7 @@ import Link from "next/link";
 const Paragraph = (props) => (
   <div
     style={{
-      margin: "1em 0",
+      margin: "3em 0",
       ...props.style,
     }}
   >
@@ -40,22 +40,29 @@ export default function Home() {
     >
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "0em",
-          padding: "2em",
+          padding: "min(5em, 5dvw)",
           backgroundColor: "white",
           // width: "70%",
           // minWidth: "33em",
           maxWidth: "85dvh",
         }}
       >
-        <Image src={door6} width="55" />
-
-        <Paragraph style={{ marginBottom: "3em" }}>
-          She walked through his front door one day during dinner... and that's
-          how they met.
-        </Paragraph>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            gap: "2em",
+            alignItems: "center",
+          }}
+        >
+          <Image style={{ display: "inline" }} src={door6} width="55" />
+          {/* <Paragraph style={{ marginBottom: "3em" }}> */}
+          <span>
+            She walked through his front door one day during dinner... and
+            that's how they met :&#41;
+          </span>
+        </div>
+        {/* </Paragraph> */}
         <Paragraph>
           She was visiting her good friend in Seattle, who happened to be his
           housemate.
@@ -68,23 +75,24 @@ export default function Home() {
           dreams for it to become a place of community and hospitality. To his
           surprise, what began as an opportunity for him to share his vision
           turned into a deeper conversation as she opened up about her own
-          dreams for what community could be.
+          dreams for what intentional community could be.
           <Aside>
             At one point, he got so excited that he attempted to give her a hug,
             forgetting that they had only just met 30 minutes prior, whereupon
-            he then retracted said hug and turned it into the most awkward
-            high-five...
+            he then retracted said hug mid-way and turned it into the most
+            awkward high-five...
           </Aside>
         </Paragraph>
         <Paragraph>
           He knew there was something special about her, but found himself a bit
-          out of his depth to match her vibe and style game. He tried to play it
-          cool while also taking every chance he could to talk with her more
-          over the short 5 days she was in Seattle.
+          out of his depth when it came to matching her vibe and style game. He
+          tried to play it cool while also taking every chance he could to talk
+          with her more over the short 5 days she was in Seattle.
           <Aside>
             What he didn't realize was that she was direct enough that "playing
-            it cool" just came across as uninterested... So much for his one
-            foray into coolness...
+            it cool" just came across as uninterested... Thankfully she was
+            direct enough that she just straight up asked him if he was
+            interested...
           </Aside>
         </Paragraph>
         <Paragraph>

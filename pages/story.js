@@ -28,12 +28,21 @@ export default function Home() {
   return (
     <div
       style={{
-        margin: "5em",
+        padding: "5em",
         fontFamily: "'Inter', sans-serif",
         lineHeight: 1.5,
+        backgroundColor: "black",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column", gap: "0em" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "0em",
+          padding: "2em",
+          backgroundColor: "white",
+        }}
+      >
         <Image src={door6} width="55" />
 
         <Paragraph style={{ marginBottom: "3em" }}>
@@ -60,10 +69,10 @@ export default function Home() {
           </Aside>
         </Paragraph>
         <Paragraph>
-          At this point he knew there was something special about her, but found
-          himself a bit out of his depth to match her vibe and style game. He
-          tried to play it cool while also taking every chance he could to talk
-          with her more over the short 5 days she was in Seattle.
+          He knew there was something special about her, but found himself a bit
+          out of his depth to match her vibe and style game. He tried to play it
+          cool while also taking every chance he could to talk with her more
+          over the short 5 days she was in Seattle.
           <Aside>
             What he didn't realize was that she was direct enough that "playing
             it cool" just came across as uninterested... So much for his one
@@ -71,12 +80,11 @@ export default function Home() {
           </Aside>
         </Paragraph>
         <Paragraph>
-          By the end of the 4th day after meeting each other, they both knew
-          they couldn't just let this go when she left. This non-spontaneous boy
-          took a spontaneous vacation to follow her to LA for the 4 days she was
-          there, she came back to Seattle a couple months later for American
-          Thanksgiving, and then he flew to Singapore for Chinese New Year and
-          met her parents.
+          They both knew they couldn't just let this go when she left. This
+          non-spontaneous boy took a spontaneous vacation to follow her to LA
+          for the 4 days she was there, she came back to Seattle a couple months
+          later for American Thanksgiving, and then he flew to Singapore for
+          Chinese New Year and met her parents.
           <Aside>
             All the while, whenever they weren't in person, they spent most of
             their free time on video chats getting to know each other. They were
@@ -92,12 +100,12 @@ export default function Home() {
           chats with shows they would watch simultaneously ("Three, two, one,
           go", he would say, to make sure they were watching the same thing at
           the same time so their laughter and commentary was also in sync) as
-          well as video games that ended up being surprisingly helpful to build
-          understanding of their dynamics.
+          well as video games that ended up being surprisingly helpful in
+          building a mutual understanding of their dynamics.
         </Paragraph>
         <Paragraph>
-          Then, suddenly, an window of opportunity. Singapore very briefly
-          opened its borders for visitors with close ties to Singaporeans, which
+          Then, suddenly, a window of opportunity. Singapore very briefly opened
+          its borders for visitors with close ties to Singaporeans, which
           amazingly included long term relationships even though they weren't
           engaged or married. On Christmas Day, with a broken toe, he hobbled
           through airport security and into his quarantine hotel, where he found
@@ -105,7 +113,7 @@ export default function Home() {
           <Aside>
             One of the welcome gifts was an adorable mini Christmas tree that,
             in the midst of his disorientation, he didn't realize was real and
-            therefore needed to be watered...
+            therefore needed to be watered... so it died...
           </Aside>
         </Paragraph>
         <Paragraph>
@@ -116,15 +124,15 @@ export default function Home() {
           peacemaking together for 3 months in community in South Africa, read
           innumerable hotel, hostel, and Airbnb reviews, and learned all the
           sorts of complicated things that a couple can only learn about
-          themselves and each other in the midst of unstable circumstances.
+          themselves and each other in the midst of ever-changing circumstances.
         </Paragraph>
         <Paragraph>
           Over time, it became clear that the differences that they (mostly he)
-          wondered might drive them apart actually catalyzed growth in each of
-          them in areas that had been stuck for decades. While they still have a
-          lot to learn to fully thrive together, it's clear to both of them at
-          this point that they couldn't have found a better lifelong
-          collaborator...
+          occasionally wondered might drive them apart ended up actually
+          catalyzing growth in each of them in areas that had been stuck for
+          decades. While they still have a lot to learn as a couple in order to
+          fully thrive together, it's clear to both of them at this point that
+          they couldn't have found a better lifelong collaborator...
         </Paragraph>
       </div>
     </div>

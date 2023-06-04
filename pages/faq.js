@@ -2,6 +2,7 @@ import { WavePath } from "../components/WavePath";
 import { ChakraProvider, Center } from "@chakra-ui/react";
 import { theme } from "../components/theme";
 import { useWindowSize } from "@uidotdev/usehooks";
+import Link from "next/link";
 
 import {
   Accordion,
@@ -180,6 +181,9 @@ export default function Faq() {
                 </div>
               </FaqSection>
             </Accordion>
+            <div style={{ marginTop: "5em" }}>
+              <Link href="/">Return to main page</Link>
+            </div>
           </div>
         </Card>
         <div style={{ position: "fixed", top: 0, zIndex: -1, width: "100dvw" }}>

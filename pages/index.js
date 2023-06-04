@@ -85,6 +85,9 @@ export default function Index() {
                   display: "flex",
                   flexDirection: "row",
                   color: "white",
+                  fontSize: isHorizontal
+                    ? baseHeartHeight / 18
+                    : baseHeartHeight / 15,
                 }}
               >
                 <div style={{ fontSize: isHorizontal ? "2em" : "1.2em" }}>
@@ -102,7 +105,15 @@ export default function Index() {
                       </span>
                     ))}
                 </div>
-                <div style={isHorizontal ? {} : { fontSize: "0.6em" }}>
+                <div
+                  style={
+                    isHorizontal
+                      ? {}
+                      : {
+                          fontSize: "0.7em",
+                        }
+                  }
+                >
                   <div>Our</div>
                   <div>Story</div>
                 </div>

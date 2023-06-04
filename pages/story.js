@@ -1,5 +1,6 @@
 import door6 from "../assets/door_6.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Paragraph = (props) => (
   <div
@@ -32,6 +33,8 @@ export default function Home() {
         fontFamily: "'Inter', sans-serif",
         lineHeight: 1.5,
         backgroundColor: "black",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <div
@@ -41,6 +44,9 @@ export default function Home() {
           gap: "0em",
           padding: "2em",
           backgroundColor: "white",
+          width: "70%",
+          minWidth: "33em",
+          maxWidth: "85dvh",
         }}
       >
         <Image src={door6} width="55" />
@@ -133,6 +139,9 @@ export default function Home() {
           decades. While they still have a lot to learn as a couple in order to
           fully thrive together, it's clear to both of them at this point that
           they couldn't have found a better lifelong collaborator...
+        </Paragraph>
+        <Paragraph style={{ marginTop: "5em" }}>
+          <Link href="/">Return to main page</Link>
         </Paragraph>
       </div>
     </div>

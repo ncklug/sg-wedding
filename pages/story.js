@@ -107,7 +107,7 @@ export default function Home() {
             simultaneously befuddled and intrigued that they had found someone
             who they felt made so little sense and yet so much sense. They were
             determined to really understand the other person and solve the
-            mystery, and haven't stopped since ...
+            mystery, and haven't stopped since...
           </Aside>
         </Paragraph>
         <Paragraph>

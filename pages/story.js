@@ -29,12 +29,13 @@ export default function Home() {
   return (
     <div
       style={{
-        padding: "5em",
+        padding: "3em 0",
         fontFamily: "'Inter', sans-serif",
         lineHeight: 1.5,
         backgroundColor: "black",
         display: "flex",
         justifyContent: "center",
+        width: "100dvw",
       }}
     >
       <div
@@ -44,8 +45,8 @@ export default function Home() {
           gap: "0em",
           padding: "2em",
           backgroundColor: "white",
-          width: "70%",
-          minWidth: "33em",
+          // width: "70%",
+          // minWidth: "33em",
           maxWidth: "85dvh",
         }}
       >

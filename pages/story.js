@@ -123,9 +123,9 @@ export default function Home() {
           Then, suddenly, a window of opportunity. Singapore very briefly opened
           its borders for visitors with close ties to Singaporeans, which
           amazingly included long term relationships even though they weren't
-          engaged or married. On Christmas Day, with a broken toe, he hobbled
-          through airport security and into his quarantine hotel, where he found
-          bags of welcome gifts she left for him.
+          engaged or married. On Christmas Day, having broken his toe two days
+          prior, he hobbled through airport security and into his quarantine
+          hotel, where he found bags of welcome gifts she left for him.
           <Aside>
             One of the welcome gifts was an adorable mini Christmas tree that,
             in the midst of his disorientation, he didn't realize was real and

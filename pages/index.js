@@ -46,7 +46,7 @@ export default function Index() {
   const heartHeightOffset = (heartHeight - heartHeight * pulseFactor) / 2;
   const router = useRouter();
 
-  const totalNumArrows = isHorizontal ? 5 : 3;
+  const totalNumArrows = isHorizontal ? 4 : 3;
   const [arrowCount, setArrowCount] = useState(0);
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -55,7 +55,6 @@ export default function Index() {
     return () => clearTimeout(timeoutId);
   }, [arrowCount]);
 
-  console.log({ arrowCount });
   return (
     <ChakraProvider theme={theme}>
       <Head>
@@ -76,7 +75,7 @@ export default function Index() {
               style={{
                 position: "relative",
                 zIndex: 1,
-                top: -size.height + size.height * (isHorizontal ? 0.4 : 0.3),
+                top: -size.height + size.height * (isHorizontal ? 0.43 : 0.3),
                 left: size.width * (isHorizontal ? 0.14 : 0.15),
               }}
             >
@@ -127,8 +126,8 @@ export default function Index() {
                 top: `calc(${
                   heartHeightOffset -
                   size.height +
-                  size.height * (isHorizontal ? 0.52 : 0.5)
-                }px - 3em)`,
+                  size.height * (isHorizontal ? 0.45 : 0.43)
+                }px - 0.3em)`,
                 left:
                   heartWidthOffset + size.width * (isHorizontal ? 0.25 : 0.65),
                 transform: `rotate(${isHorizontal ? -5 : 5}deg)`,

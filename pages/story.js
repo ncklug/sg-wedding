@@ -144,13 +144,14 @@ export default function Home() {
           themselves and each other in the midst of ever-changing circumstances.
         </Paragraph>
         <Paragraph>
-          Over time, it became clear that the differences that they (mostly he)
-          occasionally wondered might drive them apart ended up actually
-          catalyzing growth in each of them in areas that had been stuck for
-          decades. While they still have a lot to learn as a couple in order to
-          fully thrive together, it's clear to both of them at this point that
-          they couldn't have found a better partner for a lifelong
-          collaboration...
+          Through all their adventures, it became clear that the personality
+          differences that they were occasionally uncertain about ended up
+          actually catalyzing growth in each of them in areas that had been
+          stuck for decades. But of course, they're not simply getting married
+          to become legal live-in life coaches; they're excited about the kind
+          of person they've found in each other and the beautiful life they
+          could build together, and so they're inviting all of you to celebrate
+          that they've found the perfect partner for a lifelong collaboration...
         </Paragraph>
         <Paragraph style={{ marginTop: "5em" }}>
           <Link href="/">Return to main page</Link>

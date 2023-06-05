@@ -139,15 +139,15 @@ export default function Home() {
           </Aside>
         </Paragraph>
         <Paragraph>
-          After his 6 month visa in Singapore was up, and as parts of the world
+          After his 6-month visa in Singapore was up, and as parts of the world
           began to return to normal, they found other places to continue growing
           their relationship in person. They traveled through 9 countries in 10
           months, studied justice and peacemaking together in community in South
           Africa, toured Croatia with her parents and Israel with his, and most
           recently visited her friend and his former housemate &#40;who was the
-          reason they met in the first place&#41; in Tokyo, all the while
-          reading innumerable hotel, hostel, and Airbnb reviews and learning all
-          the sorts of complicated things that a couple can only learn about
+          reason they met in the first place&#41; in Tokyo. All the while they
+          read innumerable hotel, hostel, and Airbnb reviews, learning all the
+          sorts of complicated things that a couple can only discover about
           themselves and each other in the midst of ever-changing
           circumstances...
         </Paragraph>

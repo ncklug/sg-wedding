@@ -152,13 +152,14 @@ export default function Home() {
           circumstances...
         </Paragraph>
         <Paragraph>
-          Through all their adventures, it became clear that the personality
-          differences that they were occasionally uncertain about ended up
-          actually catalyzing growth in each of them in areas that had been
-          stuck for decades. But of course, they're not simply getting married
-          to become legal live-in life coaches; they're excited about the kind
-          of person they've found in each other and the beautiful life they can
-          see themselves building together in a lifelong collaboration...
+          Through all their adventures, the personality differences that they
+          were occasionally uncertain about ended up actually catalyzing growth
+          in each of them in areas that had been stuck for decades. But of
+          course, they're not simply getting married to become legal live-in
+          life coaches; they're excited about the kind of person they've found
+          in each other and the beautiful life they can see themselves building
+          together. It's clear to both of them at this point that they couldn't
+          have found a better partner for a lifelong collaboration :) :) :)
         </Paragraph>
         <Paragraph
           style={{ marginTop: "8em", marginBottom: 0, textAlign: "center" }}

@@ -126,7 +126,7 @@ export default function Index() {
                 top: `calc(${
                   heartHeightOffset -
                   size.height +
-                  size.height * (isHorizontal ? 0.45 : 0.43)
+                  size.height * (isHorizontal ? 0.44 : 0.43)
                 }px - 0.3em)`,
                 left:
                   heartWidthOffset + size.width * (isHorizontal ? 0.3 : 0.65),

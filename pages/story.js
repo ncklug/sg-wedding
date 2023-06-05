@@ -160,7 +160,9 @@ export default function Home() {
           of person they've found in each other and the beautiful life they can
           see themselves building together in a lifelong collaboration...
         </Paragraph>
-        <Paragraph style={{ marginTop: "5em" }}>
+        <Paragraph
+          style={{ marginTop: "8em", marginBottom: 0, textAlign: "center" }}
+        >
           <Link href="/">Return to main page</Link>
         </Paragraph>
       </div>

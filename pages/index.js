@@ -129,7 +129,7 @@ export default function Index() {
                   size.height * (isHorizontal ? 0.45 : 0.43)
                 }px - 0.3em)`,
                 left:
-                  heartWidthOffset + size.width * (isHorizontal ? 0.25 : 0.65),
+                  heartWidthOffset + size.width * (isHorizontal ? 0.3 : 0.65),
                 transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
               }}
             >
@@ -142,11 +142,10 @@ export default function Index() {
                 cursor: "pointer",
                 position: "relative",
                 zIndex: 2,
-                top: `calc(${
+                top:
                   -size.height -
                   heartHeight +
-                  size.height * (isHorizontal ? 0.32 : 0.29)
-                }px - 3em)`,
+                  size.height * (isHorizontal ? 0.23 : 0.23),
                 left: size.width * (isHorizontal ? 0.05 : 0.04),
               }}
             />

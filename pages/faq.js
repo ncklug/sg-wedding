@@ -181,7 +181,7 @@ export default function Faq() {
                 </div>
               </FaqSection>
             </Accordion>
-            <div style={{ marginTop: "5em" }}>
+            <div style={{ marginTop: "5em", fontSize: "0.8em" }}>
               <Link href="/">Return to main page</Link>
             </div>
           </div>

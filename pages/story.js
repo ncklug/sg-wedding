@@ -157,9 +157,8 @@ export default function Home() {
           actually catalyzing growth in each of them in areas that had been
           stuck for decades. But of course, they're not simply getting married
           to become legal live-in life coaches; they're excited about the kind
-          of person they've found in each other and the beautiful life they
-          could build together, and so they're inviting all of you to celebrate
-          that they've found the perfect partner for a lifelong collaboration...
+          of person they've found in each other and the beautiful life they can
+          see themselves building together in a lifelong collaboration...
         </Paragraph>
         <Paragraph style={{ marginTop: "5em" }}>
           <Link href="/">Return to main page</Link>

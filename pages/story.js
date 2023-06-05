@@ -143,12 +143,13 @@ export default function Home() {
           began to return to normal, they found other places to continue growing
           their relationship in person. They traveled through 9 countries in 10
           months, studied justice and peacemaking together in community in South
-          Africa, toured Croatia with her parents and Israel with his, read
-          innumerable hotel, hostel, and Airbnb reviews, most recently visited
-          her friend and his former housemate &#40;who was the reason they met
-          in the first place&#41; in Tokyo, and learned all the sorts of
-          complicated things that a couple can only learn about themselves and
-          each other in the midst of ever-changing circumstances...
+          Africa, toured Croatia with her parents and Israel with his, and most
+          recently visited her friend and his former housemate &#40;who was the
+          reason they met in the first place&#41; in Tokyo, all the while
+          reading innumerable hotel, hostel, and Airbnb reviews and learning all
+          the sorts of complicated things that a couple can only learn about
+          themselves and each other in the midst of ever-changing
+          circumstances...
         </Paragraph>
         <Paragraph>
           Through all their adventures, it became clear that the personality

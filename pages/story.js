@@ -153,7 +153,7 @@ export default function Home() {
           <Aside>
             Of course, these sort of summary snippets capture some of the
             "what/where/when" of their story, because how can one really capture
-            the essence the "how" and the "why"? Why did they end up in the
+            the essence of the "how" and the "why"? Why did they end up in the
             places they went? How did they know to persevere when on the surface
             there were parts of the relationship that didn't seem to make sense?
             Why and how did they feel like they had been prepared and had been

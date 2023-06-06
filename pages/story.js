@@ -150,6 +150,17 @@ export default function Home() {
           sorts of complicated things that a couple can only discover about
           themselves and each other in the midst of ever-changing
           circumstances...
+          <Aside>
+            Of course, these sort of summary snippets capture some of the
+            "what/where/when" of their story, but much of the "how" and "why"
+            that gives meaning and depth to the mess and complexities of real
+            life is perhaps better left for a longer conversation over a meal or
+            coffee. Why they ended up in the places they went, how they knew to
+            persevere when on the surface there were parts of the relationship
+            didn't seem to make sense, why and how they felt like they had been
+            prepared and had been preparing for each other long before they ever
+            met
+          </Aside>
         </Paragraph>
         <Paragraph>
           Through all their adventures, the personality differences that they

@@ -1,160 +1,156 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import door from "../assets/door_1.png";
-import bablogo from "../assets/bablogo.png";
-import {
-  Tooltip,
-  extendTheme,
-  ChakraProvider,
-  defineStyleConfig,
-} from "@chakra-ui/react";
+import webFaq from "../assets/uwuwebFAQwhite.png";
+import backgroundHorizontal from "../assets/backgroundHorizontal.png";
+import backgroundVertical from "../assets/backgroundVertical.png";
+import { ChakraProvider, Center } from "@chakra-ui/react";
+import { useWindowSize } from "@uidotdev/usehooks";
+import { theme } from "../components/theme";
+import { Door } from "../components/Door";
 import { useEffect, useRef, useState } from "react";
-
-// define the base component styles
-const baseTooltipStyle = {};
-
-// export the component theme
-export const tooltipTheme = defineStyleConfig({ baseStyle: baseTooltipStyle });
-
-const theme = extendTheme({
-  components: {
-    Tooltip: tooltipTheme,
-  },
-});
-
-const LOADING_DOTS = ["   ", ".  ", ".. ", "..."];
+import { useRouter } from "next/navigation";
 
 export default function Index() {
-  const [doorTooltipOpen, setDoorTooltipOpen] = useState(false);
-  const timeoutId = useRef(undefined);
-
+  const [pulseFactor, setPulseFactor] = useState(1);
+  const clearTimeoutRef = useRef();
+  const { width, height } = useWindowSize();
+  const isHorizontal = width > height;
+  const imageMeta = isHorizontal ? backgroundHorizontal : backgroundVertical;
+  const viewportRatio = width / height;
+  const imageRatio = imageMeta.width / imageMeta.height;
+  let size = { width: 0, height: 0 };
+  if (width != null) {
+    size =
+      viewportRatio > imageRatio
+        ? { height: height, width: height * imageRatio }
+        : { width: width, height: width / imageRatio };
+  }
   useEffect(() => {
-    if (doorTooltipOpen) {
-      timeoutId.current = setTimeout(() => {
-        setDoorTooltipOpen(false);
-      }, 3000);
-    } else {
-      if (timeoutId.current) {
-        clearTimeout(timeoutId.current);
-        timeoutId.current = undefined;
-      }
+    if (clearTimeoutRef.current) {
+      clearTimeout(clearTimeoutRef.current);
+      clearTimeoutRef.current = undefined;
     }
-  }, [doorTooltipOpen]);
+    clearTimeoutRef.current = setTimeout(
+      () => {
+        setPulseFactor((prev) => (prev === 1 ? prev * 1.05 : 1));
+      },
+      pulseFactor === 1 ? 500 : 70
+    );
+  }, [pulseFactor]);
+  const faqRatio = (1.2 * (isHorizontal ? 2.5 : 3)) / pulseFactor;
+  const heartWidth = (webFaq.width * (size.width / imageMeta.width)) / faqRatio;
+  const baseHeartHeight = webFaq.height * (size.height / imageMeta.height);
+  const heartHeight = baseHeartHeight / faqRatio;
+  const heartWidthOffset = (heartWidth - heartWidth * pulseFactor) / 2;
+  const heartHeightOffset = (heartHeight - heartHeight * pulseFactor) / 2;
+  const router = useRouter();
 
-  const [loadingDotsIdx, setLoadingDotsIdx] = useState(0);
-
+  const totalNumArrows = isHorizontal ? 4 : 3;
+  const [arrowCount, setArrowCount] = useState(0);
   useEffect(() => {
-    setTimeout(() => {
-      setLoadingDotsIdx((prev) => prev + 1);
-    }, 800);
-  }, [loadingDotsIdx]);
+    const timeoutId = setTimeout(() => {
+      setArrowCount((prev) => (prev + 1) % totalNumArrows);
+    }, 400);
+    return () => clearTimeout(timeoutId);
+  }, [arrowCount]);
 
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        <title>Nathan & Faith</title>
+      </Head>
       <div
         style={{
-          height: "100dvh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "min(3dvh, 2dvw)",
+          position: "absolute",
+          zIndex: -1,
+          backgroundColor: "black",
+          overflow: "hidden",
         }}
       >
-        <Head>
-          <title>Nathan & Faith</title>
-        </Head>
-
-        <div style={{ display: "flex" }}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              alignSelf: "center",
-            }}
-          >
-            <div style={{ fontSize: "0.95em", marginBottom: "0.3em" }}>
-              Please check back later :&#41;
-              {/* <span style={{ display: "inline-block", width: "3em" }}>
-                {LOADING_DOTS[loadingDotsIdx % 4]}
-              </span> */}
-            </div>
+        <Center h="100dvh" w="100dvw">
+          <div style={size}>
+            <Image {...size} src={imageMeta} />
             <div
               style={{
-                alignSelf: "center",
-                display: "flex",
-                alignItems: "center",
+                position: "relative",
+                zIndex: 1,
+                top: -size.height + size.height * (isHorizontal ? 0.43 : 0.3),
+                left: size.width * (isHorizontal ? 0.14 : 0.15),
               }}
             >
-              {/* <Tooltip
-                label={
-                  <span style={{ fontSize: "1em" }}>
-                    Come back later :&#41;
-                  </span>
-                }
-                bg="black"
-                color="white"
-                isOpen={doorTooltipOpen}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  color: "white",
+                  fontSize: isHorizontal
+                    ? baseHeartHeight / 18
+                    : baseHeartHeight / 15,
+                }}
               >
-                <Link
-                  style={{ marginBottom: "3.5em", marginRight: "1em" }}
-                  onClick={(e) => {
-                    setDoorTooltipOpen((prev) => !prev);
-                    e.preventDefault();
-                  }}
-                  href="/home"
+                <div style={{ fontSize: isHorizontal ? "2em" : "1.2em" }}>
+                  {Array(totalNumArrows - 1)
+                    .fill()
+                    .map((_, i) => (
+                      <span
+                        style={
+                          totalNumArrows - 2 - i < arrowCount
+                            ? {}
+                            : { visibility: "hidden" }
+                        }
+                      >
+                        &lt;
+                      </span>
+                    ))}
+                </div>
+                <div
+                  style={
+                    isHorizontal
+                      ? {}
+                      : {
+                          fontSize: "0.7em",
+                        }
+                  }
                 >
-                  <Image
-                    src={door}
-                    style={{
-                      width: "3em",
-                      height: "5em",
-                    }}
-                  />
-                </Link>
-              </Tooltip> */}
-              <svg width="25em" height="5em" overflow="visible">
-                {/* TODO: Add dots */}
-                <svg height="50%">
-                  <rect width="100%" height="100%" fill="black"></rect>
-                  <rect
-                    y="10%"
-                    x="1%"
-                    width="98%"
-                    height="80%"
-                    fill="white"
-                  ></rect>
-                  <rect
-                    y="20%"
-                    x="2%"
-                    width="74%"
-                    height="60%"
-                    fill="black"
-                  ></rect>
-                </svg>
-                <svg y="50%" height="1.5em" overflow="visible">
-                  <text y="97.5%" x="64%" dominantBaseline="ideographic">
-                    74%
-                  </text>
-                </svg>
-              </svg>
-              {/* <Link
-                style={{ marginBottom: "3em", marginLeft: "1em" }}
-                href="/wedding"
-              >
-                <Image
-                  src={bablogo}
-                  style={{
-                    width: "3.9em",
-                    height: "3.9em",
-                  }}
-                />
-              </Link> */}
+                  <div>Our</div>
+                  <div>Story</div>
+                </div>
+              </div>
             </div>
+            <Link
+              href="/faq"
+              style={{
+                position: "relative",
+                zIndex: 1,
+                top: `calc(${
+                  heartHeightOffset -
+                  size.height +
+                  size.height * (isHorizontal ? 0.44 : 0.43)
+                }px - 0.3em)`,
+                left:
+                  heartWidthOffset + size.width * (isHorizontal ? 0.3 : 0.65),
+                transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
+              }}
+            >
+              <Image width={heartWidth} height={heartHeight} src={webFaq} />
+            </Link>
+            <Door
+              onOpen={() => router.push("/story")}
+              width={isHorizontal ? baseHeartHeight / 4 : baseHeartHeight / 7}
+              style={{
+                cursor: "pointer",
+                position: "relative",
+                zIndex: 2,
+                top:
+                  -size.height -
+                  heartHeight +
+                  size.height * (isHorizontal ? 0.23 : 0.23),
+                left: size.width * (isHorizontal ? 0.05 : 0.04),
+              }}
+            />
           </div>
-        </div>
+        </Center>
       </div>
     </ChakraProvider>
   );

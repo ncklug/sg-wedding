@@ -12,7 +12,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter&family=Press+Start+2P&display=swap"
           rel="stylesheet"
         />
         <link
@@ -41,7 +41,7 @@ export default function Document() {
         style={{
           padding: 0,
           margin: 0,
-          fontFamily: '"Press Start 2P", cursive',
+          fontFamily: '"Press Start 2P", sans-serif',
         }}
       >
         <Main />

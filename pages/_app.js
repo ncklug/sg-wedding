@@ -1,6 +1,5 @@
-import Head from "next/head";
-import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }) {
   return (

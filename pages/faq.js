@@ -69,7 +69,8 @@ const FaqSection = (props) => (
 
 export default function Faq() {
   const { width, height } = useWindowSize();
-  const numWaves = (height == null ? 0 : Math.floor((height * 8) / width)) + 1;
+  const numWaves =
+    (height == null ? 0 : Math.min(Math.floor((height * 8) / width), 7)) + 1;
   // let numTopWaves = 3;
   // if (width < 900) {
   //   numTopWaves++;

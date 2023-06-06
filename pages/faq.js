@@ -158,7 +158,7 @@ export default function Faq() {
                     <div>Ceremony</div>
                     <div>4:45 pm</div>
                     <div>High Tea Reception</div>
-                    <div>6-ish pm</div>
+                    <div>6:30-ish pm</div>
                     <div>FIN.</div>
                   </div>
                 </div>

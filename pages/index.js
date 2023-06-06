@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import webFaq from "../assets/uwuwebFAQwhite.png";
 import backgroundHorizontal from "../assets/backgroundHorizontal.png";
-import backgroundVertical from "../assets/backgroundVertical.png";
+import backgroundVertical from "../assets/backgroundVerticalCropped.png";
 import { ChakraProvider, Center } from "@chakra-ui/react";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { theme } from "../components/theme";
@@ -75,7 +75,7 @@ export default function Index() {
               style={{
                 position: "relative",
                 zIndex: 1,
-                top: -size.height + size.height * (isHorizontal ? 0.43 : 0.3),
+                top: -size.height + size.height * (isHorizontal ? 0.43 : 0.21),
                 left: size.width * (isHorizontal ? 0.14 : 0.15),
               }}
             >
@@ -109,7 +109,7 @@ export default function Index() {
                     isHorizontal
                       ? {}
                       : {
-                          fontSize: "0.7em",
+                          fontSize: "0.6em",
                         }
                   }
                 >
@@ -126,7 +126,7 @@ export default function Index() {
                 top: `calc(${
                   heartHeightOffset -
                   size.height +
-                  size.height * (isHorizontal ? 0.44 : 0.43)
+                  size.height * (isHorizontal ? 0.44 : 0.4)
                 }px - 0.3em)`,
                 left:
                   heartWidthOffset + size.width * (isHorizontal ? 0.3 : 0.65),
@@ -145,7 +145,7 @@ export default function Index() {
                 top:
                   -size.height -
                   heartHeight +
-                  size.height * (isHorizontal ? 0.23 : 0.23),
+                  size.height * (isHorizontal ? 0.23 : 0.1),
                 left: size.width * (isHorizontal ? 0.05 : 0.04),
               }}
             />

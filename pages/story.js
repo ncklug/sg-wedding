@@ -161,7 +161,7 @@ export default function Home() {
             sort of questions that give meaning and depth to the mess and
             complexities of real life, and exist as invitations to deeper
             friendship and community... questions which are perhaps better left
-            for a longer conversation over a meal or coffee
+            for a longer conversation over coffee or a meal
           </Aside>
         </Paragraph>
         <Paragraph>

@@ -120,8 +120,8 @@ export default function Home() {
           as video games that ended up being surprisingly helpful in building a
           mutual understanding of their dynamics...
           <Aside>
-            She ran headfirst into "danger", while he strategized from a safe
-            distance
+            She trusted her instincts and ran headfirst into "danger", while he
+            strategized from a safe distance
           </Aside>
         </Paragraph>
         <Paragraph>

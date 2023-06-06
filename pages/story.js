@@ -135,7 +135,7 @@ export default function Home() {
           <Aside>
             One of the welcome gifts was an adorable mini Christmas tree that,
             in the midst of his disorientation, he didn't realize was real and
-            therefore needed to be watered. So it died.
+            therefore needed to be watered. So it died
           </Aside>
         </Paragraph>
         <Paragraph>

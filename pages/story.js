@@ -158,7 +158,7 @@ export default function Home() {
             there were parts of the relationship that didn't seem to make sense?
             Why and how did they feel like they had been prepared and had been
             preparing for each other long before they ever met? Those are the
-            sort of questions that give meaning and depth to the mess and
+            sort of questions that give meaning and depth to the messiness and
             complexities of real life, and exist as invitations to deeper
             friendship and community... questions which are perhaps better left
             for a longer conversation over coffee or a meal

@@ -152,7 +152,7 @@ export default function Home() {
           circumstances...
           <Aside>
             Of course, these sort of summary snippets capture some of the
-            "what/where/when" of their story, because how can one really capture
+            "what/when/where" of their story, because how can one really capture
             the essence of the "how" and the "why"? Why did they end up in the
             places they went? How did they know to persevere when on the surface
             there were parts of the relationship that didn't seem to make sense?

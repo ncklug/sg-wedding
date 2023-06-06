@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Index() {
+  // Add comment
   const [pulseFactor, setPulseFactor] = useState(1);
   const clearTimeoutRef = useRef();
   const { width, height } = useWindowSize();

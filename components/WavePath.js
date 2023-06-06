@@ -4,7 +4,7 @@ export const WavePathBackground = (props) =>
 export const WavePath = (props) => (
   <svg
     width="100%"
-    height="14dvw"
+    height="max(14dvh, 14dvw)"
     viewBox="0 0 1098.72 37"
     style={
       {

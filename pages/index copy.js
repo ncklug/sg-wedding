@@ -10,8 +10,44 @@ import { theme } from "../components/theme";
 import { Door } from "../components/Door";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import {Countdown} from '../components/Countdown'
 
+const WEDDING_TIME = "06/24/2023 15:45:00+08:00"
+
+const Countdown = () => {
+  const [elapsedSeconds, setElapsedSeconds] = useState(0)
+  const [baseCurrentTime, setBaseCurrentTime] = useState(new Date(WEDDING_TIME).getTime())
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {setElapsedSeconds(prev => prev + 1)}, 1000)
+    return () => clearTimeout(timeoutId)
+  }, [elapsedSeconds])
+  useEffect(() => {
+    setBaseCurrentTime((new Date()).getTime())
+  }, []) 
+  const currentTime = baseCurrentTime + (elapsedSeconds *1000)
+  // const weddingTime = (new Date("06/24/2023 13:45:00")).getTime()
+  const weddingTime = (new Date(WEDDING_TIME)).getTime()
+  const differenceInMiliseconds = weddingTime - currentTime
+  if (differenceInMiliseconds < 0) {
+    return 'NAO!'
+  }
+  const differenceInSeconds = Math.floor(differenceInMiliseconds /1000)
+  const seconds = differenceInSeconds % 60
+  const differenceInMinutes = Math.floor(differenceInSeconds /60)
+  const minutes = differenceInMinutes %60
+  const differenceInHours = Math.floor(differenceInMinutes /60)
+  const hours = differenceInHours % 24
+  const days = Math.floor(differenceInHours /24)
+
+  return <div>
+    <div>
+      {`${days}DAY${days === 1 ? '' : 'S'}`}
+      </div><div>{`${hours}HR${hours === 1 ? '' : 'S'}`}
+    </div>
+    <div>
+      {`${minutes}MIN${minutes === 1 ? '' : 'S'}`}</div><div>{`${seconds}SEC${seconds === 1 ? '' : 'S'}`}
+    </div>
+  </div>
+}
 
 export default function Index() {
   // Add comment
@@ -125,16 +161,16 @@ export default function Index() {
               style={{
                 position: "relative",
                 zIndex: 1,
-                top: -size.height + size.height * (isHorizontal ? 0.82 : 0.38),
-                left: size.width * (isHorizontal ? 0.17 : 0.22),
+                top: -size.height + size.height * (isHorizontal ? 0.49 : 0.37),
+                left: size.width * (isHorizontal ? 0.04 : 0.05),
+
               }}
             >
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  textAlign: 'center',
-                  color: isHorizontal ? "black" : 'white',
+                  color: "white",
                   fontSize: isHorizontal
                     ? baseHeartHeight / 18
                     : baseHeartHeight / 15,
@@ -143,13 +179,13 @@ export default function Index() {
                 <div
                   style={
                     isHorizontal
-                      ? { fontSize: '0.6em'}
+                      ? {}
                       : {
-                          fontSize: "0.7em",
+                          fontSize: "0.6em",
                         }
                   }
                 >
-                  <div>24TH JUNE 2023</div>
+                  <div>24/06</div><div>2023</div>
                   <div><Countdown /></div>
                 </div>
               </div>
@@ -159,13 +195,18 @@ export default function Index() {
               style={{
                 position: "relative",
                 zIndex: 1,
+                // top: 
+                //   heartHeightOffset -
+                //   size.height +
+                //   size.height * (isHorizontal ? 0.44 : 0.4)
+                // ,
                 top: 
                   heartHeightOffset -
                   size.height +
-                  size.height * (isHorizontal ? 0.37 : 0.36)
+                  size.height * (isHorizontal ? 0.14 : 0.4)
                 ,
                 left:
-                  heartWidthOffset + size.width * (isHorizontal ? 0.3 : 0.71),
+                  heartWidthOffset + size.width * (isHorizontal ? 0.3 : 0.65),
                 transform: `rotate(${isHorizontal ? -5 : 5}deg)`,
               }}
             >
@@ -178,10 +219,15 @@ export default function Index() {
                 cursor: "pointer",
                 position: "relative",
                 zIndex: 2,
+                // top: `calc(${
+                //   -size.height -
+                //    heartHeight +
+                //   size.height * (isHorizontal ? 0.12 : 0.05)
+                // }px)`,
                 top: 
                   -size.height -
                    heartHeight +
-                  size.height * (isHorizontal ? 0.18 : 0.03)
+                  size.height * (isHorizontal ? -0.07 : 0.05)
                 ,
                 left: size.width * (isHorizontal ? 0.05 : 0.04),
               }}

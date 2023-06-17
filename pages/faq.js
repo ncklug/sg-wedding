@@ -3,6 +3,7 @@ import { ChakraProvider, Center } from "@chakra-ui/react";
 import { theme } from "../components/theme";
 import { useWindowSize } from "@uidotdev/usehooks";
 import Link from "next/link";
+import { Countdown } from "../components/Countdown";
 
 import {
   Accordion,
@@ -100,11 +101,37 @@ export default function Faq() {
           ))} */}
         <Card>
           <div>
+          <div
+                style={{
+                  // display: "flex",
+                  // flexDirection: "row",
+                  color: "white",
+                  fontSize: '2.7em'
+
+                  // fontSize: isHorizontal
+                  //   ? baseHeartHeight / 18
+                  //   : baseHeartHeight / 15,
+                }}
+              >
+                <div
+                  // style={
+                  //   // isHorizontal
+                  //   //   ? {}
+                  //   //   : {
+                  //   //       fontSize: "0.5em",
+                  //   //     }
+                  // }
+                >
+                  <div>24TH JUNE</div>
+                  <div style={{fontSize: '0.6em'}}><Countdown /></div>
+                </div>
+              </div>
             <h1
               style={{
                 marginBottom: "0.5em",
                 fontSize: "2.9em",
                 marginLeft: "0.5em",
+                marginTop: '1.0em'
               }}
             >
               FAQ

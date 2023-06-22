@@ -1,5 +1,5 @@
 // pages/_document.js
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from "next/document"
 
 export default function Document() {
   return (
@@ -12,7 +12,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter&family=Press+Start+2P&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap"
           rel="stylesheet"
         />
         <link
@@ -48,5 +48,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }

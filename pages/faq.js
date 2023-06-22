@@ -1,9 +1,9 @@
-import { WavePath } from "../components/WavePath";
-import { ChakraProvider, Center } from "@chakra-ui/react";
-import { theme } from "../components/theme";
-import { useWindowSize } from "@uidotdev/usehooks";
-import Link from "next/link";
-import { Countdown } from "../components/Countdown";
+import { WavePath } from "../components/WavePath"
+import { ChakraProvider, Center } from "@chakra-ui/react"
+import { theme } from "../components/theme"
+import { useWindowSize } from "@uidotdev/usehooks"
+import Link from "next/link"
+import { Countdown } from "../components/Countdown"
 
 import {
   Accordion,
@@ -12,7 +12,7 @@ import {
   AccordionPanel,
   Box,
   AccordionItem,
-} from "@chakra-ui/react";
+} from "@chakra-ui/react"
 
 const Card = (props) => (
   <div style={{ display: "flex", justifyContent: "center" }}>
@@ -44,7 +44,7 @@ const Card = (props) => (
       {/* </div> */}
     </div>
   </div>
-);
+)
 
 const FaqSection = (props) => (
   <AccordionItem>
@@ -66,12 +66,12 @@ const FaqSection = (props) => (
       {props.children}
     </AccordionPanel>
   </AccordionItem>
-);
+)
 
 export default function Faq() {
-  const { width, height } = useWindowSize();
+  const { width, height } = useWindowSize()
   const numWaves =
-    (height == null ? 0 : Math.min(Math.floor((height * 8) / width), 7)) + 1;
+    (height == null ? 0 : Math.min(Math.floor((height * 8) / width), 7)) + 1
   // let numTopWaves = 3;
   // if (width < 900) {
   //   numTopWaves++;
@@ -101,37 +101,39 @@ export default function Faq() {
           ))} */}
         <Card>
           <div>
-          <div
-                style={{
-                  // display: "flex",
-                  // flexDirection: "row",
-                  color: "white",
-                  fontSize: '2.7em'
+            <div
+              style={{
+                // display: "flex",
+                // flexDirection: "row",
+                color: "white",
+                fontSize: "2.7em",
 
-                  // fontSize: isHorizontal
-                  //   ? baseHeartHeight / 18
-                  //   : baseHeartHeight / 15,
-                }}
+                // fontSize: isHorizontal
+                //   ? baseHeartHeight / 18
+                //   : baseHeartHeight / 15,
+              }}
+            >
+              <div
+              // style={
+              //   // isHorizontal
+              //   //   ? {}
+              //   //   : {
+              //   //       fontSize: "0.5em",
+              //   //     }
+              // }
               >
-                <div
-                  // style={
-                  //   // isHorizontal
-                  //   //   ? {}
-                  //   //   : {
-                  //   //       fontSize: "0.5em",
-                  //   //     }
-                  // }
-                >
-                  <div>24TH JUNE</div>
-                  <div style={{fontSize: '0.6em'}}><Countdown /></div>
+                <div>24TH JUNE</div>
+                <div style={{ fontSize: "0.6em" }}>
+                  <Countdown />
                 </div>
               </div>
+            </div>
             <h1
               style={{
                 marginBottom: "0.5em",
                 fontSize: "2.9em",
                 marginLeft: "0.5em",
-                marginTop: '1.0em'
+                marginTop: "1.0em",
               }}
             >
               FAQ
@@ -200,6 +202,10 @@ export default function Faq() {
                     <p>187940</p>
                   </a>
                 </Box>
+                <div style={{ marginBottom: "2em" }}>
+                  * Note that there are road closures scheduled for the city
+                  center area for National Day parade preparation.
+                </div>
                 <div>Transport/parking </div>
                 <div>information</div>
                 <div>
@@ -223,5 +229,5 @@ export default function Faq() {
         </div>
       </div>
     </ChakraProvider>
-  );
+  )
 }

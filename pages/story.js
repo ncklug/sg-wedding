@@ -1,17 +1,7 @@
-import door6 from "../assets/door_6.png";
-import Image from "next/image";
-import Link from "next/link";
-
-const Paragraph = (props) => (
-  <div
-    style={{
-      margin: "3em 0",
-      ...props.style,
-    }}
-  >
-    {props.children}
-  </div>
-);
+import door6 from "../assets/door_6.png"
+import Image from "next/image"
+import Link from "next/link"
+import { Paragraph } from "../components/Paragraph"
 
 const Aside = (props) => (
   <div
@@ -23,7 +13,7 @@ const Aside = (props) => (
   >
     &#40;{props.children}&#41;
   </div>
-);
+)
 
 export default function Home() {
   return (
@@ -181,5 +171,5 @@ export default function Home() {
         </Paragraph>
       </div>
     </div>
-  );
+  )
 }

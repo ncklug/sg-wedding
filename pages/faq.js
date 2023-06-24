@@ -214,6 +214,15 @@ export default function Faq() {
                   </a>
                 </div>
               </FaqSection>
+              <FaqSection title="Livestream">
+                <Box mb="2em">
+                  Watch our wedding livestream{" "}
+                  <a href="https://youtube.com/live/_fpr45AZpB4?feature=share">
+                    here
+                  </a>{" "}
+                  :)
+                </Box>
+              </FaqSection>
             </Accordion>
             <div style={{ marginTop: "5em", fontSize: "0.8em" }}>
               <Link href="/">Return to main page</Link>

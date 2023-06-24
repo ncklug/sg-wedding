@@ -18,7 +18,7 @@ export default function Catworks() {
       }
       materials="Assemblage of capsule machine figures (mostly cats), dried flowers, found objects, miscellaneous"
       qr={qr}
-      mode="printQr"
+      mode="print"
       paragraphs={[
         `Nathan really strongly encouraged Faith to make this series, because
 he felt it really captures a couple of the things he finds most
@@ -37,7 +37,7 @@ both of them dread to eat again into something better than it started.`,
         `The title references her angst that this is what she’s using her art
 school education for, and also the time they went to an “affordable
 art fair” in Singapore where almost all the art was over $1000. These
-pieces are all under $10 (not actually for sale) 🙂`,
+pieces are all under $10 (not actually for sale) :)`,
       ]}
     />
   )

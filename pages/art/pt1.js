@@ -1,4 +1,3 @@
-import Image from "next/image"
 import qr from "../../assets/qr/pt1.svg"
 import { ArtistStatement } from "../../components/ArtistStatement"
 

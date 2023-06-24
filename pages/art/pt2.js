@@ -13,7 +13,7 @@ export default function Pt2() {
       }
       materials="Polaroids, fabric wristband, tokens"
       qr={qr}
-      //   mode="printQr"
+      //   mode="print"
       paragraphs={[
         `This the second in a three-part interactive series (starting with “Welcome to uwuvu” and followed by “Let Love Bloom How It May”), this is where the primary interactivity comes into play.`,
         `We invite each and every one of you to take a photo of something at the wedding that catches your eye, and head to the polaroid station, where a volunteer will print it off for you and post it on the wall with everyone else’s. Then, you’ll be given a fabric wristband and two tokens, one of which can be used in the third part of the series.`,

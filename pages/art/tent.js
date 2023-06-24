@@ -11,7 +11,7 @@ export default function Tent() {
       }
       materials="Assorted cloth, fishing line, birch poles, assorted rugs and other decor"
       qr={qr}
-      //   mode="printQr"
+      //   mode="print"
       paragraphs={[
         `This is the centerpiece, and it represents so much about the couple’s experiences and values.`,
         `To Nathan, it evokes some of his most vivid memories from childhood: hours spent building blanket forts that took up entire rooms of his childhood home for months, spiderweb forts topped with balloons which are some of his only memories of his late cousin, and trench and tarp forts dug into the woods behind his house that were one of the best ways for him to connect with his childhood friends and get his head out of books and video games.`,

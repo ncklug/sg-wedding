@@ -13,7 +13,7 @@ export default function Pt3() {
       }
       materials="Capsule machine, flower tea, tokens, surprise"
       qr={qr}
-      //   mode="printQr"
+      //   mode="print"
       paragraphs={[
         `The third and final piece in this three-part interactive series (preceded by “Welcome to uwuvu” and “Community Collage”), invites reflection on the unpredictable nature of mature friendship. One of the tokens from “Community Collage” is used in the capsule/gacha machine, which gives a random prize in a small ball, and the other token is kept as a souvenir.`,
         `The delightful and often frustrating thing about capsule machines is that you don’t know which of the prizes you are going to get. In this case, most of the capsules contain flower teas, representing the continued blooming and blossoming of friendship.`,

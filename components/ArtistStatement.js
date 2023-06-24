@@ -10,7 +10,7 @@ export const ArtistStatement = ({ paragraphs, title, materials, qr, mode }) => (
   >
     <div
       style={{
-        paddingTop: "3em",
+        paddingTop: "1em",
         backgroundColor: mode ? "white" : "black",
         width: "100%",
         height: "100dvh",
@@ -32,9 +32,11 @@ export const ArtistStatement = ({ paragraphs, title, materials, qr, mode }) => (
             <div style={{ margin: "0 0 2.8em" }}>{materials}</div>
           </div>
 
-          {paragraphs.map((paragraph) => (
-            <Paragraph gap="s">{paragraph}</Paragraph>
-          ))}
+          <div style={{ fontSize: "0.95em" }}>
+            {paragraphs.map((paragraph) => (
+              <Paragraph gap="s">{paragraph}</Paragraph>
+            ))}
+          </div>
           {mode !== "print" ? null : (
             <div
               style={{

@@ -18,7 +18,7 @@ export default function Catworks() {
       }
       materials="Assemblage of capsule machine figures (mostly cats), dried flowers, found objects, miscellaneous"
       qr={qr}
-      mode="print"
+      // mode="print"
       paragraphs={[
         `Nathan really strongly encouraged Faith to make this series, because
 he felt it really captures a couple of the things he finds most

@@ -13,7 +13,7 @@ export default function Catworks() {
       }
       materials="Paper wristband"
       qr={qr}
-      //   mode="printQr"
+      //   mode="print"
       paragraphs={[
         `This is the first in a three-part interactive series (followed by “Community Collage” and “Let Love Bloom How It May”). This wristband is intended to be evocative of the kind of wristband used for entry into events, and here has a double meaning.`,
         `On the surface, it literally marks your entry into this wedding, which we intend to theme as a premier of an art exhibition representing our lives and relationship. So much of a real relationship cannot be described with words or even captured with pictures. We did our best to design a semi-immersive exhibition space where we can try to convey the essence of our relationship through a varied collection of art pieces in different mediums.`,

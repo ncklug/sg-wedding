@@ -11,7 +11,7 @@ export default function Cloud() {
       }
       materials="Dried flowers, preserved flowers, chicken wire"
       qr={qr}
-      //   mode="printQr"
+      //   mode="print"
       paragraphs={[
         `As described in the description of the blanket fort tent (“Home”), this flower cloud represents the couple’s longing for their relationship to be led by God as they sojourn through this life towards a more permanent home… It also reminds them of a funny story from early in their relationship that you can ask them about.`,
         `Even within this work itself though, there are a collection of tensions.`,

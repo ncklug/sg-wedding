@@ -32,7 +32,7 @@ export const ArtistStatement = ({ paragraphs, title, materials, qr, mode }) => (
             <div style={{ margin: "0 0 2.8em" }}>{materials}</div>
           </div>
 
-          <div style={{ fontSize: "0.95em" }}>
+          <div style={{}}>
             {paragraphs.map((paragraph) => (
               <Paragraph gap="s">{paragraph}</Paragraph>
             ))}

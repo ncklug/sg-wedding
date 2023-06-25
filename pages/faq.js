@@ -122,10 +122,8 @@ export default function Faq() {
               //   //     }
               // }
               >
-                <div>24TH JUNE</div>
-                <div style={{ fontSize: "0.6em" }}>
-                  <Countdown />
-                </div>
+                {/* <div>24TH JUNE</div>
+                <div style={{ fontSize: "0.6em" }}><Countdown /></div> */}
               </div>
             </div>
             <h1
@@ -215,13 +213,11 @@ export default function Faq() {
                 </div>
               </FaqSection>
               <FaqSection title="Livestream">
-                <Box mb="2em">
-                  Watch our wedding livestream{" "}
-                  <a href="https://youtube.com/live/_fpr45AZpB4?feature=share">
-                    here
-                  </a>{" "}
-                  :)
-                </Box>
+                <Box mb="2em">There was an error with the livestream :(</Box>
+                <div>
+                  Once the videographer gets back to us with their footage,
+                  we'll post it here for you to watch :)
+                </div>
               </FaqSection>
             </Accordion>
             <div style={{ marginTop: "5em", fontSize: "0.8em" }}>
